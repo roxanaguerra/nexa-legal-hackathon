@@ -1,5 +1,7 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
+import firebase from 'firebase/app';
+
+const firebaseConfig = {
     apiKey: "AIzaSyAnJZqnL-c13J6UG8VhIcRREikTgfo3r2c",
     authDomain: "nexa-lh.firebaseapp.com",
     databaseURL: "https://nexa-lh.firebaseio.com",
@@ -11,3 +13,5 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+export default firebase;
