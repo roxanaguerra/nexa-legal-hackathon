@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebase from '../controller/main';
 
+//** Importación de elemetos */
+import logoNexa from '../img/logoNexa.png';
+
+
 const Login = () => {
   const history = useHistory();
 
@@ -30,10 +34,21 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-        <input type="email" className="" placeholder="Correo" required value={email} onChange={handleChange} />
-        <input type="password" className="" placeholder="Contraseña" required value={password} onChange={handleChanged} />
-        <button className="" onClick={send} type="submit">Ingresar</button>
+    <div className="container-login">
+      <div className="container-logo-form">
+        <div className="logo-login">
+          <img src={logoNexa} alt="logo nexa" />
+        </div>
+        <form action="" className="form-login">
+          <label htmlFor="" >Correo electrónico</label>
+          <input type="email" className="input-login" placeholder="Correo" value={email} onChange={handleChange}  required/>
+          <label htmlFor="">Contraseña</label>
+          <input type="password" className="input-login" placeholder="Contraseña" required value={password} onChange={handleChanged} />
+          <p>¿Olvidaste tu contraseña?</p>
+          <button className="" onClick={send} type="submit">INICIAR SESIÓN</button>
+          <p>¿No tienes cuenta? Registrate</p>
+        </form>
+      </div>
     </div>
   );
 };
