@@ -1,0 +1,26 @@
+.nav-bar-bottom {
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 90px;
+    justify-content: space-around;
+    background-color: rgba(196, 176, 176, 0.481);
+    img {
+        margin: auto 15px;
+    }
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+}
+
+.item-bar {
+  background: yellow;
+}
