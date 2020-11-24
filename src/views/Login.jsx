@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import firebase from '../controller/main';
 
 //** Importación de elemetos */
-import logoNexa from '../img/logoNexa.jpg';
+import logoNexa from '../img/logoNexa.png';
 
 
 const Login = () => {
