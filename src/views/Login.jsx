@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import firebase from '../controller/main';
 
 const Login = () => {
-//   const history = useHistory();
+  const history = useHistory();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,8 +11,8 @@ const Login = () => {
   const send = (e) => {
     e.preventDefault();
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-    //   history.push('/home');
-    console.log('logueado');
+      history.push('/capacitacion');
+      console.log('logueado');
     });
     console.log(email, password);
   };
@@ -35,7 +35,6 @@ const Login = () => {
         <input type="password" className="" placeholder="Contraseña" required value={password} onChange={handleChanged} />
         <button className="" onClick={send} type="submit">Ingresar</button>
     </div>
-
   );
 };
 export default Login;
