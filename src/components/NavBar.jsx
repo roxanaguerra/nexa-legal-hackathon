@@ -1,26 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import iconCapacitacion from '../assets/capacitacion.png';
-import iconAcompañamiento from '../assets/acompañamiento.png';
-import iconPlanAccion from '../assets/accion.png';
+
+//** Importación de elemetos */
+import iconCapacitacion from '../assets/images/icon-training.png';
+import iconAcompañamiento from '../assets/images/icon-accompaniment.png';
+import iconPlanAccion from '../assets/images/icon-plan.png';
 
 const NavBar = () => {
     return(
         <div className="nav-bar nav-bar-bottom">
-            <Link to="/capacitacion" className="item-bar">
-                <img className="icon" src={iconCapacitacion} alt="capacitacion" />
-                {/* <p>Capacitación</p> */}
+            <Link to="/capacitacion">
+                <div className="nav-bar-item">
+                    <img className="icon" src={iconCapacitacion} alt="capacitacion" />
+                    <p className="title-nav-bar item-active">Capacitación</p>
+                </div>
             </Link>    
             
             <Link to="/acompañamiento">
-                <img className="icon" src={iconAcompañamiento} alt="acompañamiento" />
-                {/* <p>Acompañamiento</p> */}
+                <div className='nav-bar-item'>
+                    <img className="icon" src={iconAcompañamiento} alt="acompañamiento" />
+                    <p className="title-nav-bar">Acompañamiento</p>
+                </div>
             </Link>
             <Link to="/accion">
-                <img className="icon" src={iconPlanAccion} alt="planAccion" />
-                {/* <p>Plan de Acción</p> */}
+                <div className="nav-bar-item">
+                    <img className="icon" src={iconPlanAccion} alt="planAccion" />
+                    <p className="title-nav-bar">Plan de Acción</p>
+                </div>
             </Link>
-            
         </div>    
     )
 };

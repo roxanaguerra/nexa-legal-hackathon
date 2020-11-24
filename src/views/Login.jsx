@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import firebase from '../controller/main';
 
 //** Importación de elemetos */
-import logoNexa from '../img/logoNexa.png';
+import logoNexa from '../assets/images/logo-nexa-suma.png';
 
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
       history.push('/capacitacion');
       console.log('logueado');
     });
-    console.log(email, password);
+    // console.log(email, password);
   };
 
 
