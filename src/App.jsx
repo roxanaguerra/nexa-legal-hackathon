@@ -1,9 +1,11 @@
 import './styles/index.scss';
+import Login from './views/Login';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>NEXA!</h1>
+      <h1>NEXA2!</h1>      
+      <Login />
     </div>
   );
 }
