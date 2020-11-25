@@ -33,6 +33,7 @@ const Accompaniment = () => {
                             ))
                         }
                         <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                        <NavBar />
                     </>
                 : <div className='new-supervision-container'>
                     <button onClick={() => setSupervision(true)} className="btn-back">
