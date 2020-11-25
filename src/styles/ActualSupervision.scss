@@ -1,0 +1,50 @@
+.file-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    button {
+        border-radius:5px;
+        width: 80px;
+        height: 25px;
+        border: none;
+        background-color: $primaryColor;
+        box-shadow:  2px 2px 4px #3c3c3c5f;
+        font-family: $font;
+        color: white;
+    }
+    button:disabled,
+    button[disabled]{
+        border: none;
+        background-color: #cccccc;
+        color: #666666;
+    }
+}
+
+.btn-file-container{
+	position:relative;
+	margin:10px;
+	padding:10px;
+	width:120px;
+	background-color:white;
+    border-radius:5px;
+    box-shadow:  2px 2px 4px #3c3c3c5f;
+    text-align: center;
+    i {
+        font-size: 30px;
+        color:$secondaryColor;
+    }
+    .btn-file-text{
+        margin: 0;
+    }
+    .btn_enviar{
+        position:absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        width:100%;
+        height:100%;
+        opacity: 0;
+    }
+}
