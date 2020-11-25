@@ -6,16 +6,13 @@ const Modal = ({modal, closeModal, a, setModal}) => {
     return (
         <>
             <div className={showHideClassName}>
-                {/* <p>{console.log(a.textAnswer) }</p> */}
                 <section className="modal-main">
-                    <p>{a.textQ}</p>
+                    <p>{a.textAnswer}</p>
                     <button onClick={closeModal}>Cerrar</button>
                 </section>                
             </div>
-        </>
-        
+        </>        
     )
 }
-
 
 export default Modal;
