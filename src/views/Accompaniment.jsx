@@ -10,27 +10,24 @@ const Accompaniment = () => {
     
     const [supervision, setSupervision] = useState (true);
 
-    
     return(
         <>
-        <div>
-            { supervision ? 
-                <>
-                    <Header name="Acompañamiento" />
-                    < ListSupervision supervision={supervision} setSupervision={setSupervision} />
-                </>
-            : <>
-                <button onClick={() => setSupervision(true)}>
-                    <i className="fas fa-arrow-left btn-back" ></i>
-                </button>
-                <Header name="Registrar Supervisión" />
-                <NewSupervision />
-            </>}
-        </div>
+            <div>
+                { supervision ? 
+                    <>
+                        <Header name="Acompañamiento" />
+                        < ListSupervision supervision={supervision} setSupervision={setSupervision} />
+                    </>
+                : <>
+                    <button onClick={() => setSupervision(true)}>
+                        <i className="fas fa-arrow-left btn-back" ></i>
+                    </button>
+                    <Header name="Registrar Supervisión" />
+                    <NewSupervision />
+                </>}
+            </div>
 
-        <NavBar
-            supervision={supervision}
-            setSupervision={setSupervision} />
+            <NavBar />
         </>
     )
 };

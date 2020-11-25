@@ -1,6 +1,6 @@
 import React from 'react'
 
- const Modal = ({modal, closeModal}) => {
+const Modal = ({modal, closeModal}) => {
     return (
         <div className="container-modal"
             style={

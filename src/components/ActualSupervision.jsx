@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storage } from '../controller/main';
 
 const ActualSupervision = () => {
-    
+
     const [file, setFile] = useState(null);
     const [url, setURL] = useState("");
 
@@ -26,7 +26,7 @@ const ActualSupervision = () => {
     }
 
     return (
-        <div>
+        <>
             <form onSubmit={handleUpload}>
                 <div className="file-container">
                     <div className="btn-file-container">
@@ -41,7 +41,7 @@ const ActualSupervision = () => {
 
             <img src={url} alt="" />
             {console.log(url)}
-        </div>
+        </>
     );
 };
 

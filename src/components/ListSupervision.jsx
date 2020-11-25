@@ -1,6 +1,6 @@
 import React from 'react'
 
- const ListSupervision = ({setSupervision,supervision}) => {
+const ListSupervision = ({ setSupervision, supervision }) => {
 
 
     return (

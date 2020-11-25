@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { firebase } from '../controller/main';
 
-//** Importación de elemetos */
+// Importación de elemetos
 import logoNexa from '../assets/images/logo-nexa-suma.png';
-
 
 const Login = () => {
   const history = useHistory();

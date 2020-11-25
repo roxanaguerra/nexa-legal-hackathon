@@ -3,7 +3,6 @@ import { firebase } from './main';
 // COLECCION EN FIRESTORE
 const collectionSupervision = () => firebase.firestore().collection('Supervision');
 
-
 // AGREGAR DOCS A LA COLECCION
 const addSupervision = (data) => {
     // console.log(data);
