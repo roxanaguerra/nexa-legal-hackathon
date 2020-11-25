@@ -1,51 +1,46 @@
 .container-login {
     width: 100vw;
     height: 100vh;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
 }
 
-.container-logo-form{
+.container-logo-form {
     width: 90%;
     height: 90%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
 }
 
-.logo-login{
+.logo-login {
     width: 100%;
-    height: 200px;
     text-align: center;
-    // background-color: #dadada;
-    margin-top: 30px;
-    margin-left: 5%;
-
+    /* background-color: chartreuse; */
     img {
-        margin-top: 10px;
-        width: 90%;
+        margin: 10% 0;
+        width: 70%;
     }
-
 }
 
-.form-login{
+.form-login {
     width: 90%;
-    margin-left: 10%;
-    margin-top: 20%;
     display: flex;
     flex-flow: column nowrap;
-
-    label{
-        margin-left: 10px;
+    /* background-color: blueviolet */;
+    label {
         font-weight: bold;
     }
-
-    .input-login{
-        margin: 10px;
+    .input-login {
         font-family: $font;
         padding: 5px;
         padding: 10px;
-
+        margin: 10px 0;
     }
-
-    button{
+    button {
         margin: 10px;
         width: 90%;
         margin-left: 15px;
@@ -54,10 +49,8 @@
         border-radius: 5px;
         font-weight: bold;
     }
-    p{
+    p {
         text-align: center;
-       font-size: $text-small;
-        
+        font-size: $text-small;
     }
-
 }

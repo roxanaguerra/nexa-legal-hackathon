@@ -1,26 +1,40 @@
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: $secondaryColor;
+}
+
 .nav-bar-bottom {
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .nav-bar {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    height: 90px;
-    justify-content: space-around;
-    background-color: rgba(196, 176, 176, 0.481);
-    img {
-        margin: auto 15px;
-    }
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.125) inset;
 }
 
-.icon {
-  width: 90px;
-  height: 90px;
+.nav-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin: auto 2px;
+  }
+  .title-nav-bar {
+    margin: 0;
+    font-size: 12px;
+  }
 }
 
-.item-bar {
-  background: yellow;
+.item-active {
+  color: $primaryColor;
+  font-weight: bold;
 }
