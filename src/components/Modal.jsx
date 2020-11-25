@@ -2,17 +2,16 @@ import React from 'react';
 
 
  const Modal = ({modal, closeModal, a, setModal}) => {
+    const showHideClassName = modal ? "modal display-block" : "modal display-none";
     return (
         <>
-        {modal ? 
-            
-            <div className="container-modal" style={ {opacity: modal ? '1': 0}}>
-                <p>{console.log(a.textAnswer) }</p>
-                <button onClick={() => setModal(prev => !prev)}>Cerrar</button>
+            <div className={showHideClassName}>
+                {/* <p>{console.log(a.textAnswer) }</p> */}
+                <section className="modal-main">
+                    <p>{a.textQ}</p>
+                    <button onClick={closeModal}>Cerrar</button>
+                </section>                
             </div>
-            :
-            null
-        }
          </>
         
     )

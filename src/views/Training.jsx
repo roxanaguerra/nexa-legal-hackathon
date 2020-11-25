@@ -5,13 +5,11 @@ import Modal from '../components/Modal';
 import QuestionCard from '../components/QuestionCard';
 import dataQ from '../data/dataQuestion.json';
 
-const Training = (props) => {
+const Training = () => {
 
-    // const [modal, setModal] = useState(false);
-
-    // const closeModal = () => setModal(false);
-    // const openModal = () => setModal(prev => !prev);
-
+    const [modal, setModal] = useState('');
+    const closeModal = () => setModal(false);
+    const openModal = (id) => setModal(id);
 
     return(
         <>
@@ -20,36 +18,21 @@ const Training = (props) => {
             {dataQ.questions.map((question,index)=>{
                 return (
                     <>
-                    {/* <div onClick={openModal}> */}
                         <QuestionCard
-                            key ={'q'-index}
+                            key ={'q' + index}
                             question= {question}
-                            dataQ ={dataQ}
-                            // openModal={openModal}
-                        />
-                    {/* </div> */}
-                       
+                            openModal={() => openModal('answer'+ index)}
+                        />  
                         
                         <Modal
-                        key ={'answer'-index}
-                        a={question}
-                        // modal={modal}
-                        // setModal={setModal}
-                        // closeModal={closeModal} 
+                            key ={'answer'+ index}
+                            a={question}
+                            modal={modal === 'answer'+ index}
+                            closeModal={closeModal} 
                         />
                     </>
-                    
                 )
-            })}
-{/*             
-            {dataQ.answers.map((a,index)=>(
-                <Modal
-                    key ={'answear'-index}
-                    a={a}
-                    modal={modal}
-                    closeModal={closeModal} />
-            ))} */}
-             
+            })}             
                   
             <NavBar />
         </>

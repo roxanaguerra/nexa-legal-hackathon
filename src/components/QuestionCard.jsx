@@ -1,10 +1,10 @@
 import React,{ useState }  from 'react'
 
-const QuestionCard= ({dataQ, question})=> {
+const QuestionCard= ({question, openModal})=> {
 
-    const [modal, setModal] = useState(false);
-    const closeModal = () => setModal(false);
-    const openModal = () => setModal(true);
+    // const [modal, setModal] = useState(false);
+    // const closeModal = () => setModal(false);
+    // const openModal = () => setModal(true);
 // 
     // prev => !prev
 
@@ -12,7 +12,7 @@ const QuestionCard= ({dataQ, question})=> {
         <div className="card-question" onClick={openModal}>
             <p>{question.textQ}</p>
             {/* <p>{question.textAnswer}</p> */}
-         </div> 
+        </div> 
     )
 }
 
