@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import firebase from '../controller/main';
+import { firebase } from '../controller/main';
 
 //** Importación de elemetos */
 import logoNexa from '../assets/images/logo-nexa-suma.png';
@@ -45,11 +45,12 @@ const Login = () => {
           <label htmlFor="">Contraseña</label>
           <input type="password" className="input-login" placeholder="Contraseña" required value={password} onChange={handleChanged} />
           <p>¿Olvidaste tu contraseña?</p>
-          <button className="" onClick={send} type="submit">INICIAR SESIÓN</button>
+          <button onClick={send} type="submit">INICIAR SESIÓN</button>
           <p>¿No tienes cuenta? Registrate</p>
         </form>
       </div>
     </div>
   );
 };
+
 export default Login;
