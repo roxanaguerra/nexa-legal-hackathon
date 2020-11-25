@@ -6,7 +6,7 @@ import iconCapacitacion from '../assets/images/icon-training.png';
 import iconAcompañamiento from '../assets/images/icon-accompaniment.png';
 import iconPlanAccion from '../assets/images/icon-plan.png';
 
-const NavBar = () => {
+const NavBar = ({setSupervision, supervision}) => {
     return(
         <div className="nav-bar nav-bar-bottom">
             <Link to="/capacitacion">
