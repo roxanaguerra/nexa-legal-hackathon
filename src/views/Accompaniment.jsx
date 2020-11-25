@@ -19,8 +19,8 @@ const Accompaniment = () => {
                         < ListSupervision supervision={supervision} setSupervision={setSupervision} />
                     </>
                 : <>
-                    <button onClick={() => setSupervision(true)}>
-                        <i className="fas fa-arrow-left btn-back" ></i>
+                    <button onClick={() => setSupervision(true)} className="btn-back">
+                        <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
                     <Header name="Registrar Supervisión" />
                     <NewSupervision />

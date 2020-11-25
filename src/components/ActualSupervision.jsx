@@ -27,20 +27,22 @@ const ActualSupervision = () => {
 
     return (
         <>
-            <form onSubmit={handleUpload}>
-                <div className="file-container">
-                    <div className="btn-file-container">
-                        <i className="fas fa-cloud-upload-alt"></i>
-                        <p className="btn-file-text">Credenciales supervisor</p>
-                        <input type="file" className="btn_enviar" onChange={handleChange}/>
+            { !url ? (
+                <form onSubmit={handleUpload}>
+                    <div className="file-container">
+                        <div className="btn-file-container">
+                            <i className="fas fa-cloud-upload-alt"></i>
+                            <p className="btn-file-text">Credenciales supervisor</p>
+                            <input type="file" className="btn_enviar" onChange={handleChange}/>
+                        </div>
+
+                        <button disabled={!file}>Subir</button>
                     </div>
-
-                    <button disabled={!file}>Subir</button>
-                </div>
-            </form>
-
-            <img src={url} alt="" />
-            {console.log(url)}
+                </form>    
+            )        
+            :
+            <img src={url} alt={url} />
+            }
         </>
     );
 };
