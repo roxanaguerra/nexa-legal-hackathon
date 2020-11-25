@@ -1,4 +1,4 @@
-import firebase from './main';
+import { firebase } from './main';
 
 // COLECCION EN FIRESTORE
 const collectionSupervision = () => firebase.firestore().collection('Supervision');
