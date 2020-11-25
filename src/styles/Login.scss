@@ -21,29 +21,34 @@
     text-align: center;
     /* background-color: chartreuse; */
     img {
-        margin: 10% 0;
+        margin-bottom: 10%;
         width: 70%;
+        height: auto;
+        max-width: 450px;
     }
 }
 
 .form-login {
     width: 90%;
+    max-width: 700px;
     display: flex;
     flex-flow: column nowrap;
-    /* background-color: blueviolet */;
+    align-items: center;
+    /* background-color: rgb(111, 94, 128) */;
     label {
         font-weight: bold;
+        align-self: start;
     }
     .input-login {
         font-family: $font;
+        width: 100%;
         padding: 5px;
         padding: 10px;
         margin: 10px 0;
     }
     button {
-        margin: 10px;
+
         width: 90%;
-        margin-left: 15px;
         padding: 10px;
         font-family: $font;
         border-radius: 5px;
@@ -52,5 +57,6 @@
     p {
         text-align: center;
         font-size: $text-small;
+        color: $primaryColor
     }
 }

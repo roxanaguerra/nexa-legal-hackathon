@@ -1,7 +1,11 @@
-.btn-back{
-    color: white;
-    font-size: 30px;
-    z-index: 99;
-    position: relative;
-    margin: 5px 10px;
+.btn-back {
+    background-color: transparent;
+    border: none;
+    .btn-back-i {
+        color: white;
+        font-size: 30px;
+        z-index: 99;
+        position: relative;
+        margin: 3px 10px;
+    }
 }
