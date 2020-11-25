@@ -4,13 +4,12 @@ const ListSupervision = ({ setSupervision, supervision }) => {
 
 
     return (
-        <>
+        <div className="list-cards">
             <div className="container-listCards-supervisions">
-                <p>para cargar Lista de cards Supervisiones</p>
+                <p>Aún no tienes supervisiones registradas</p>
             </div>
-                <button className="btn-primary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
-            
-        </>
+                <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+        </div>
     )
 }
 

@@ -12,7 +12,7 @@ const QuestionCard= ({dataQ, question})=> {
         <div className="card-question" onClick={openModal}>
             <p>{question.textQ}</p>
             {/* <p>{question.textAnswer}</p> */}
-         </div> 
+        </div> 
     )
 }
 

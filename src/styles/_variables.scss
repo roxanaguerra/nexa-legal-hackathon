@@ -1,9 +1,18 @@
-$primaryColor: #FF5000;
+// Colores
+$backgroundColor: #F9F9F9;
+
 $secondaryColor: #3C3C3C;
+$nexaOrange: #FF5000;
 $ligthOrange: #FF7536;
 $btnActive: #FF7536;
-$backgroundColor: #F9F9F9;
+
+
+// Tipografía
 $font: 'Lato', sans-serif;
 $text-big:1.5em; /*Equivalente a 24px, tomando como base 16px*/
 $text-medium:1.25em; /*Equivalente a 20px, tomando como base 16px*/
 $text-small:0.75em; /*Equivalente a 20px, tomando como base 16px*/
+
+// Estilos
+$borderRadius: 3px;
+$boxShadow: 2px 2px 4px #3c3c3c5f;

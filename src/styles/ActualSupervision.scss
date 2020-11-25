@@ -1,19 +1,15 @@
 .file-container {
+    width: 200px;
+    /* background-color: yellowgreen; */
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin-top: 50px;
     button {
-        border-radius:5px;
-        width: 80px;
+        width: 100px;
         height: 25px;
-        border: none;
-        background-color: $primaryColor;
-        box-shadow:  2px 2px 4px #3c3c3c5f;
-        font-family: $font;
-        color: white;
-    }
+    } 
     button:disabled,
     button[disabled]{
         border: none;
@@ -26,10 +22,10 @@
 	position:relative;
 	margin:10px;
 	padding:10px;
-	width:120px;
+	width:150px;
 	background-color:white;
-    border-radius:5px;
-    box-shadow:  2px 2px 4px #3c3c3c5f;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
     text-align: center;
     i {
         font-size: 30px;

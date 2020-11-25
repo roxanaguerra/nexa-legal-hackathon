@@ -7,13 +7,18 @@
 }
 
 .container-logo-form {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: aquamarine; */
+    @media screen and (min-width: 1024px) {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow:  2px 2px 4px #3c3c3c5f;
+        padding: 90px 50px;
+    }
 }
 
 .logo-login {
@@ -22,14 +27,14 @@
     /* background-color: chartreuse; */
     img {
         margin-bottom: 10%;
-        width: 70%;
+        width: 100%;
         height: auto;
-        max-width: 450px;
+        max-width: 300px;
     }
 }
 
 .form-login {
-    width: 90%;
+    width: 100%;
     max-width: 700px;
     display: flex;
     flex-flow: column nowrap;
@@ -42,21 +47,14 @@
     .input-login {
         font-family: $font;
         width: 100%;
-        padding: 5px;
-        padding: 10px;
+        padding: 10px 0;
         margin: 10px 0;
+        border: 2px solid #C4C4C4;
+        border-radius: 3px;
     }
-    button {
 
-        width: 90%;
-        padding: 10px;
-        font-family: $font;
-        border-radius: 5px;
-        font-weight: bold;
-    }
     p {
         text-align: center;
-        font-size: $text-small;
-        color: $primaryColor
+        font-size: 0.9em;
     }
 }

@@ -36,12 +36,15 @@ const ActualSupervision = () => {
                             <input type="file" className="btn_enviar" onChange={handleChange}/>
                         </div>
 
-                        <button disabled={!file}>Subir</button>
+                        <button disabled={!file} className="btn-secondary">Subir</button>
                     </div>
                 </form>    
             )        
             :
-            <img src={url} alt={url} />
+            <div className="file-container">
+                <img src={url} alt={url} />
+            </div>
+
             }
         </>
     );

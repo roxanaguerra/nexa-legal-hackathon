@@ -44,7 +44,7 @@ const Login = () => {
           <label htmlFor="">Contraseña</label>
           <input type="password" className="input-login" placeholder="Contraseña" required value={password} onChange={handleChanged} />
           <p>¿Olvidaste tu contraseña?</p>
-          <button onClick={send} type="submit">INICIAR SESIÓN</button>
+          <button onClick={send} type="submit" className="btn-primary">INICIAR SESIÓN</button>
           <p>¿No tienes cuenta? Registrate</p>
         </form>
       </div>
