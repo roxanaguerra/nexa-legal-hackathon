@@ -1,6 +1,6 @@
-import React,{ useState }  from 'react'
+import React from 'react'
 
-const QuestionCard= ({question, openModal})=> {
+const QuestionCard= ({ question, openModal })=> {
 
     // const [modal, setModal] = useState(false);
     // const closeModal = () => setModal(false);

@@ -17,5 +17,4 @@ const Modal = ({modal, closeModal, a, setModal}) => {
     )
 }
 
-
 export default Modal;

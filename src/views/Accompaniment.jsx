@@ -16,18 +16,17 @@ const Accompaniment = () => {
                 { supervision ? 
                     <>
                         <Header name="Acompañamiento" />
-                        < ListSupervision supervision={supervision} setSupervision={setSupervision} />
+                        <ListSupervision supervision={supervision} setSupervision={setSupervision} />
+                        <NavBar />
                     </>
-                : <>
+                : <div className='new-supervision-container'>
                     <button onClick={() => setSupervision(true)} className="btn-back">
                         <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
                     <Header name="Registrar Supervisión" />
                     <NewSupervision />
-                </>}
+                </div>}
             </div>
-
-            <NavBar />
         </>
     )
 };

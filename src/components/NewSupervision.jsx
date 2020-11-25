@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import firestore from '../controller/firestore';
+import { Button, Form } from "react-bootstrap";
 
 const NewSupervision = () =>{
     const initialStateSupervision = {
@@ -42,49 +43,87 @@ const NewSupervision = () =>{
     };
 
     return (
-        <>
-            <div className="container-newSupervision">  
-                <form action=""className="form-accompaniment">
+        <div className="newSupervision">
+            <div className="title-newS">
                     <h3>Ingresar datos de la supervisión:</h3>
-                    <select name="unidad" onChange={handleInputChange} value={newSupervision.unidad} required >
-                        <option value="selecciona">Selecciona Unidad</option>
-                        <option value="atocha">Atacocha</option>
-                        <option value="elporvenir">El Porvenir</option>
-                        <option value="cerrolindo">Cerro Lindo</option>
-                        <option value="cajamarquilla">Cajamarquilla</option>
-                    </select>
-                    <select name="typeSupervision" onChange={handleInputChange} value={newSupervision.typeSupervision} required >
-                        <option value="tipoSupervision">Selecciona tipo de supervisión</option>
-                        <option value="regular">Regular</option>
-                        <option value="especial">Especial</option>
-                    </select>
-                    <input type="date" placeholder="Fecha de Inicio" onChange={handleInputChange} name="startDate" value={newSupervision.startDate} required />
-                    <input type="date" placeholder="Fecha de Fin" onChange={handleInputChange} name="expirationDate" value={newSupervision.expirationDate} required />
-                    <input type="text" placeholder="Objetivo" onChange={handleInputChange} name="objective" value={newSupervision.objective} required />
-                    <input type="text" placeholder="Lider" onChange={handleInputChange} name="leader" value={newSupervision.leader} required />
-                    <input type="text" placeholder="Alterno" onChange={handleInputChange} name="alternate" value={newSupervision.alternate} required />
-                    <select name="probing" onChange={handleInputChange} value={newSupervision.probing} required >
-                        <option value="tipoSupervision">Toma de muestras</option>
-                        <option value="regular">Si</option>
-                        <option value="especial">No</option>
-                    </select>
-                    <select name="operationalArea" onChange={handleInputChange} value={newSupervision.operationalArea} required >
-                        <option value="tipoSupervision">Área Operativa</option>
-                        <option value="regular">Si</option>
-                        <option value="especial">No</option>
-                    </select>
-                    <input type="text" placeholder="Observaciones" onChange={handleInputChange} name="observations" value={newSupervision.observations} required />
-                    <button className="" type="button" onClick={handleRegisterSupervision}>REGISTRAR SUPERVISION</button>           
-                </form>
-            {
-                confirmationSend ? 
-                <div className="confirmation">
-                    Guardado en Colección
-                </div>
-                : null
-            }
             </div>
-        </>
+
+            <div className="container-newSupervision">      
+                <Form className="form-container">
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Control as="select" name="unidad" onChange={handleInputChange} value={newSupervision.unidad} required >
+                            <option value="selecciona">Selecciona Unidad</option>
+                            <option value="atacocha">Atacocha</option>
+                            <option value="elporvenir">El Porvenir</option>
+                            <option value="cerrolindo">Cerro Lindo</option>
+                            <option value="cajamarquilla">Cajamarquilla</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Control as="select" name="typeSupervision" onChange={handleInputChange} value={newSupervision.typeSupervision} required >
+                            <option value="tipoSupervision">Selecciona tipo de supervisión</option>
+                            <option value="regular">Regular</option>
+                            <option value="especial">Especial</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Fecha de Inicio</Form.Label>
+                        <Form.Control type="date" placeholder="Fecha de inicio" onChange={handleInputChange} name="startDate" value={newSupervision.startDate} required/>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Fecha de Fin</Form.Label>
+                        <Form.Control type="date"  placeholder="Fecha de Fin" onChange={handleInputChange} name="expirationDate" value={newSupervision.expirationDate} required/>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Control type="text" placeholder="Objetivo" onChange={handleInputChange} name="objective" value={newSupervision.objective} required/>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Control type="text" placeholder="Lider" onChange={handleInputChange} name="leader" value={newSupervision.leader} required/>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Control type="text" placeholder="Alterno" onChange={handleInputChange} name="alternate" value={newSupervision.alternate} required/>
+                    </Form.Group>
+
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Control as="select" name="probing" onChange={handleInputChange} value={newSupervision.probing} required >
+                            <option value="tipoSupervision">Toma de muestras</option>
+                            <option value="regular">Si</option>
+                            <option value="especial">No</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Control as="select" name="operationalArea" onChange={handleInputChange} value={newSupervision.operationalArea} required >
+                            <option value="tipoSupervision">Área Operativa</option>
+                            <option value="regular">Si</option>
+                            <option value="especial">No</option>
+                        </Form.Control>
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Control type="text" placeholder="Observaciones" onChange={handleInputChange} name="observations" value={newSupervision.observations} required />
+                    </Form.Group>
+
+                    <Button className="btn-primary-custom" type="submit" onClick={handleRegisterSupervision} >
+                        REGISTRAR SUPERVISIÓN
+                    </Button>
+                </Form>
+
+                {
+                    confirmationSend ? 
+                    <div className="confirmation">
+                        Guardado en Colección
+                    </div>
+                    : null
+                }
+            </div>
+        </div>
     )
 }
 

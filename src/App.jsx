@@ -7,6 +7,7 @@ import PageNotFound from './views/PageNotFound';
 import {
   BrowserRouter as Router, Route, Switch, HashRouter,
 } from 'react-router-dom';
+/* import 'bootstrap/dist/css/bootstrap.min.css'; */
 
 const App = () => (
     <Router>
