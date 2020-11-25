@@ -1,15 +1,20 @@
-import React from 'react'
+import React from 'react';
 
- const Modal = ({modal, closeModal}) => {
+
+ const Modal = ({modal, closeModal, a, setModal}) => {
     return (
-        <div className="container-modal"
-            style={
-                {opacity: modal ? '1': 0}
-            }
-        >
-            <p>este es la respuesta</p>
-            <button onClick={closeModal}>Cerrar</button>
-        </div>
+        <>
+        {modal ? 
+            
+            <div className="container-modal" style={ {opacity: modal ? '1': 0}}>
+                <p>{console.log(a.textAnswer) }</p>
+                <button onClick={() => setModal(prev => !prev)}>Cerrar</button>
+            </div>
+            :
+            null
+        }
+         </>
+        
     )
 }
 

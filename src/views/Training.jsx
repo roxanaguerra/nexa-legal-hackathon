@@ -2,21 +2,54 @@ import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
+import QuestionCard from '../components/QuestionCard';
+import dataQ from '../data/dataQuestion.json';
 
+const Training = (props) => {
 
-const Training = () => {
+    // const [modal, setModal] = useState(false);
 
-    const [modal, setModal] = useState(false);
+    // const closeModal = () => setModal(false);
+    // const openModal = () => setModal(prev => !prev);
 
-    const closeModal = () => setModal(false);
 
     return(
         <>
-            <Header name="Capacitación" />   
-            <button className="card-question" onClick={() =>setModal(true)}>
-             <p>esta es una pregunta?</p>
-            </button>
-             <Modal modal={modal} closeModal={closeModal} />
+            <Header name="Capacitación" /> 
+            
+            {dataQ.questions.map((question,index)=>{
+                return (
+                    <>
+                    {/* <div onClick={openModal}> */}
+                        <QuestionCard
+                            key ={'q'-index}
+                            question= {question}
+                            dataQ ={dataQ}
+                            // openModal={openModal}
+                        />
+                    {/* </div> */}
+                       
+                        
+                        <Modal
+                        key ={'answer'-index}
+                        a={question}
+                        // modal={modal}
+                        // setModal={setModal}
+                        // closeModal={closeModal} 
+                        />
+                    </>
+                    
+                )
+            })}
+{/*             
+            {dataQ.answers.map((a,index)=>(
+                <Modal
+                    key ={'answear'-index}
+                    a={a}
+                    modal={modal}
+                    closeModal={closeModal} />
+            ))} */}
+             
                   
             <NavBar />
         </>
