@@ -8,12 +8,12 @@
         {
             "id":2,
             "textQ": "¿Qué temas están fuera del ámbito de la fiscalización ambiental a cargo de OEFA?",
-            "textAnswer": "rta PRUEBA1"
+            "textAnswer": "1. La fiscalización de temas de seguridad y salud en el trabajo 2. La fiscalización e temas de seguridad de la infraestructura"
         },
         {
             "id":3,
             "textQ": "¿Qué tipos de supervisión existen?",
-            "textAnswer": "rta PRUEBA233"
+        "textAnswer": "REGULAR : Supervisión que se realiza de manera periódica y planificada. Se realiza en base a una planificación anual que elabora OEFA. ESPECIAL: Aquella que se realiza en atención a: "
         }
     ]
 }

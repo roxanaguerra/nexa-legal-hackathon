@@ -13,6 +13,7 @@ const NewSupervision = () =>{
         probing: '',
         operationalArea: '',
         observations: '',
+        stateSupervision: 'proceso',
     };
 
     const [newSupervision, setNewSupervision] = useState(initialStateSupervision);

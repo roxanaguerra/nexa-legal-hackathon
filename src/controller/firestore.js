@@ -15,6 +15,19 @@ const addSupervision = (data) => {
       });
 };
 
+// LEER LOS DOCS DE LA COLECCION
+const getSupervision = (stateSupervision, callback) => {
+  collectionSupervision().where('stateSupervision', '==', stateSupervision).onSnapshot((query) => {
+    const docs = [];
+    query.forEach((supervision) => {
+      docs.push({ ...supervision.data(), id: supervision.id });
+    });
+    console.log(docs);
+    callback(docs);
+  });
+};
+
 export default {
     addSupervision,
+    getSupervision,
 }
