@@ -2,19 +2,21 @@ a:link, a:visited, a:active {
   text-decoration:none;
   color: $secondaryColor;
 }
+
 .nav-bar-bottom {
+  position: fixed;
   bottom: 0%;
   left: 0%;
   right: 0%;
 }
 
 .nav-bar {
+  height: 60px;
   display: flex;
   align-items: center;
-  position: fixed;
-  height: 75px;
   justify-content: space-around;
-  background-color: rgba(196, 176, 176, 0.481);
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.125) inset;
 }
 
 .nav-bar-item {
@@ -22,16 +24,17 @@ a:link, a:visited, a:active {
   flex-direction: column;
   align-items: center;
   .icon {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     margin: auto 2px;
   }
   .title-nav-bar {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 .item-active {
   color: $primaryColor;
+  font-weight: bold;
 }

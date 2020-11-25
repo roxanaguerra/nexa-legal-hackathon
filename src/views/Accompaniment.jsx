@@ -1,10 +1,11 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 
 const Accompaniment = () => {
     return(
         <>
-            <h1>ACOMPAÑANDO!</h1>
+            <Header name="Acompañamiento" />  
             <NavBar />
         </>
     )

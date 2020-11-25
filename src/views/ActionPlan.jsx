@@ -1,10 +1,11 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 
 const ActionPlan = () => {
     return(
         <>
-            <h1>PLAN DE ACCION!</h1>
+            <Header name="Plan de acción" />   
             <NavBar />
         </>
     )

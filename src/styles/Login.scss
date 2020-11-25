@@ -6,7 +6,7 @@
     align-items: center; 
 }
 
-.container-logo-form{
+.container-logo-form {
     width: 90%;
     height: 90%;
     display: flex;
@@ -16,36 +16,31 @@
     /* background-color: aquamarine; */
 }
 
-.logo-login{
+.logo-login {
     width: 100%;
     text-align: center;
     /* background-color: chartreuse; */
-
     img {
         margin: 10% 0;
         width: 70%;
     }
-
 }
 
-.form-login{
+.form-login {
     width: 90%;
     display: flex;
     flex-flow: column nowrap;
     /* background-color: blueviolet */;
-
-    label{
+    label {
         font-weight: bold;
     }
-
-    .input-login{
+    .input-login {
         font-family: $font;
         padding: 5px;
         padding: 10px;
         margin: 10px 0;
     }
-
-    button{
+    button {
         margin: 10px;
         width: 90%;
         margin-left: 15px;
@@ -58,5 +53,4 @@
         text-align: center;
         font-size: $text-small;
     }
-
 }

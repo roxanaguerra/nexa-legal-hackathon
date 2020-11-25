@@ -25,7 +25,7 @@ const NavBar = () => {
             <Link to="/accion">
                 <div className="nav-bar-item">
                     <img className="icon" src={iconPlanAccion} alt="planAccion" />
-                    <p className="title-nav-bar">Plan de Acción</p>
+                    <p className="title-nav-bar">Plan de acción</p>
                 </div>
             </Link>
         </div>    

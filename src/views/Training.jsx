@@ -1,10 +1,11 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 
 const Training = () => {
     return(
         <>
-            <h1>CAPACITANDO!</h1>            
+            <Header name="Capacitación" />           
             <NavBar />
         </>
     )
