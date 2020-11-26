@@ -1,5 +1,5 @@
 .list-cards {
-    width: 80%;
+    width: 90%;
     background-color: white;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
@@ -7,11 +7,14 @@
 }
 
 .list-cards-container {
-    padding: 10px;;
-
+    width: 80%;
     p {
         margin: 0;
     }
+}
+
+.icon-upload {
+    color: $secondaryColor;
 }
 
 /* .container-listCards-supervisions {

@@ -3,45 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .fq {
-        width: 90%;   
-        margin: 15px 0;
-        font-weight: bold;
-    }
 }
 
-.indication-container {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    img {
-        width: 30px;
-        height: auto;
-        margin-right: 15px;
-    }
-    p {
-        margin: 0;
-    }
-}
-
-.question-card {
-    width: 90%;
-    border-bottom: 1px solid #3c3c3c2e;
-    padding: 10px 8px;
-    display: flex;
-    align-items: center;
-    i {
-        color: $nexaOrange;
-        font-size: 20px;
-        margin-right: 10px;   
-    }
-    .icon-left {
-        justify-self: start;
-    }
-    .icon-right {
-        justify-self: end;
-    }
-    p {
-        margin: 0;
-    }
+.fq {
+    width: 90%;   
+    margin: 15px 0;
+    font-weight: bold;
 }

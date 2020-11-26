@@ -7,9 +7,11 @@ const Modal = ({modal, closeModal, a, setModal}) => {
         <>
             <div className={showHideClassName}>
                 <section className="modal-main">
+                    <button onClick={closeModal} className="close-modal">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <h4>{a.textQ}</h4>
                     <p>{a.textAnswer}</p>
-                    <button onClick={closeModal}>Cerrar</button>
                 </section>                
             </div>
         </>        

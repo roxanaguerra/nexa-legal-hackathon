@@ -10,6 +10,8 @@
 @import 'Modal';
 @import 'Subtitle';
 @import 'UploadImage';
+@import 'TextIndication';
+@import 'QuestionCard';
 
 body {
     font-family: $font;
@@ -19,7 +21,7 @@ body {
 // Botones
 .btn-primary-custom, .btn-secondary-custom {
     width: 100%;
-    max-width: 300px;
+    max-width: 340px;
     height: 35px;
     color: white;
     font-family: $font;
