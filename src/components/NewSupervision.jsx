@@ -130,10 +130,10 @@ const NewSupervision = ({setSupervision }) => {
                 </Form>
                 {
                     confirmationSend ?
-                        <ModalConfirmation
-                            modal={modal}
-                            closeModal={closeModal} 
-                        />
+                            <ModalConfirmation
+                                modal={modal}
+                                closeModal={closeModal} 
+                            />
                     : null
                 }
             </div>
