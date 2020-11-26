@@ -35,6 +35,7 @@ const Accompaniment = () => {
                     <>
                     { seeSupervision ?
                         <>
+                            {/* VISTA SUPERVISIÓN ACTUAL */}
                             <button onClick={() => setSeeSupervision(false)} className="btn-back">
                                 <i className="fas fa-arrow-left btn-back-i" ></i>
                             </button>
@@ -43,15 +44,16 @@ const Accompaniment = () => {
                         </>
                     : 
                         <>
+                            {/* VISTA INICIAL */}
                             <Header name="ACOMPAÑAMIENTO" />
-                            <Subtitle text="Registra las supervisiones" /> {/* Sequeda vista inicial */}
+                            <Subtitle text="Registra las supervisiones" /> 
 
                             <div className="container-listCards-supervisions">
-                            <TextIndication 
+                                <TextIndication 
                                 image={iconHoja}
                                 text="Sube la información y SUMA rapidez en en los proceso de sistematización de NEXA." />
 
-                            <p className="fq">Lista de acompañamientos</p>
+                                <p className="fq">Lista de acompañamientos</p>
 
                                 {
                                     dataSupervisions.map((sup, index) => (
