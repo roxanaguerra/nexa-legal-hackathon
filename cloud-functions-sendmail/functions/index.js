@@ -31,7 +31,9 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         
         // getting dest email by query string
         // const dest = req.query.dest;
+        // const dest = 'rpiazzon@hotmail.com';
         const dest = 'marcelacoronelp@gmail.com';
+        // const dest2 = 'anarativa09@gmail.com';
 
         const mailOptions = {
             from: 'Nexa Ambiental', // Something like: Jane Doe <janedoe@gmail.com>
