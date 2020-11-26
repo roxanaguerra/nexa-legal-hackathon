@@ -5,10 +5,12 @@ import firestore from '../controller/firestore';
 // Importar componentes según estado
 import NewSupervision from '../components/NewSupervision';
 import ListSupervision from '../components/ListSupervision';
+import ActualSupervision from '../components/ActualSupervision';
 
 const Accompaniment = () => {
     
-    const [supervision, setSupervision] = useState (true);
+    const [supervision, setSupervision] = useState(true);
+    const [seeSupervision, setSeeSupervision] = useState(false);
     const [dataSupervision, setDataSupervision] = useState([]);
     const [stateSupervision, setStateSupervision] = useState('proceso');
 
@@ -26,14 +28,27 @@ const Accompaniment = () => {
             <div>
                 { supervision ? 
                     <>
-                        <Header name="Acompañamiento" />
-                        {
-                            dataSupervision.map((sup) => (
-                                <ListSupervision key={sup.id} setSupervision={setSupervision} dataSupervision={sup} />
-                            ))
-                        }
-                        <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
-                        <NavBar />
+                    { seeSupervision ?
+                        <>
+                            <button onClick={() => setSeeSupervision(false)} className="btn-back">
+                                <i className="fas fa-arrow-left btn-back-i" ></i>
+                            </button>
+                            <Header name="Registrar Supervisión" />
+                            <ActualSupervision /> 
+                        </>
+                      : 
+                        <>
+                            <Header name="Acompañamiento" />
+                            {
+                                dataSupervision.map((sup) => (
+                                    <ListSupervision key={sup.id} setSeeSupervision={setSeeSupervision} dataSupervision={sup} />
+                                ))
+                            }
+                            <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                            <NavBar />
+                        </>
+                    }
+                        
                     </>
                 : <div className='new-supervision-container'>
                     <button onClick={() => setSupervision(true)} className="btn-back">

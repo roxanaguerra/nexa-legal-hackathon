@@ -1,13 +1,13 @@
 import React from 'react'
 
-const ListSupervision = ({ setSupervision, dataSupervision }) => {
+const ListSupervision = ({ setSeeSupervision, dataSupervision }) => {
 
     console.log('list: ', dataSupervision);
 
     return (
-        <div className="list-cards">
+        <div className="list-cards" onClick={()=>{setSeeSupervision(true)}} >
             <div className="container-listCards-supervisions">
-                <p>{dataSupervision.objective} - Supervisión {dataSupervision.typeSupervision}</p>
+                <p>{dataSupervision.unidad} - Supervisión {dataSupervision.typeSupervision}</p>
                 <p>{dataSupervision.startDate}</p>
                 <p>{dataSupervision.stateSupervision} - Evaluar Plan de Acción</p>
             </div>
