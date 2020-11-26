@@ -1,13 +1,13 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
-import ActualSupervision from '../components/ActualSupervision';
+import UploadImage from '../components/UploadImage';
 
 const ActionPlan = () => {
     return(
         <>
             <Header name="Plan de acción" />
-            <ActualSupervision />
+            <UploadImage />
             <NavBar />
         </>
     )
