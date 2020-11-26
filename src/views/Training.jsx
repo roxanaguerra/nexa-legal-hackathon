@@ -14,28 +14,35 @@ const Training = () => {
     return(
         <>
             <Header name="Capacitación" /> 
-            
-            {dataQ.questions.map((question,index)=>{
-                return (
-                    <>
-                        <QuestionCard
-                            key ={'q' + index}
-                            question= {question}
-                            openModal={() => openModal('answer'+ index)}
-                        />  
-                        
-                        <Modal
-                            key ={'answer'+ index}
-                            a={question}
-                            modal={modal === 'answer'+ index}
-                            closeModal={closeModal} 
-                        />
-                    </>
-                )
-            })}            
+            <div className="title-newS">
+                <h3>Conoce tus derechos y obligaciones:</h3>
+            </div>
+
+            <div className="card-question-container">
+                {dataQ.questions.map((question,index)=>{
+                    return (
+                        <>  
+                            
+                                <QuestionCard
+                                    key ={'q' + index}
+                                    question= {question}
+                                    openModal={() => openModal('answer'+ index)}
+                                />
+                            
+                            
+                            <Modal
+                                key ={'answer'+ index}
+                                a={question}
+                                modal={modal === 'answer'+ index}
+                                closeModal={closeModal} 
+                            />
+                        </>
+                    )
+                })}  
+            </div>   
+
             <NavBar />
         </>
     )
 };
-
 export default Training;

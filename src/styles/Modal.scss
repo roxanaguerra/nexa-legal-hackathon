@@ -10,11 +10,15 @@
 .modal-main {
   position:fixed;
   background: white;
+  padding: 20px;
   width: 80%;
   height: auto;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+  h4 {
+    color: $nexaOrange;
+  }
 }
 
 .display-block {

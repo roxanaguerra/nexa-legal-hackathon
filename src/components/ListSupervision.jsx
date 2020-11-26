@@ -6,8 +6,8 @@ const ListSupervision = ({ setSupervision, dataSupervision }) => {
 
     return (
         <div className="list-cards">
-            <div className="container-listCards-supervisions">
-                <p>{dataSupervision.objective} - Supervisión {dataSupervision.typeSupervision}</p>
+            <div className="list-cards-container">
+                <p>{dataSupervision.unidad} - Supervisión {dataSupervision.typeSupervision}</p>
                 <p>{dataSupervision.startDate}</p>
                 <p>{dataSupervision.stateSupervision} - Evaluar Plan de Acción</p>
             </div>

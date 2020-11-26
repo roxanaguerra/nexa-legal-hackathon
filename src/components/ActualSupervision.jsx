@@ -36,7 +36,7 @@ const ActualSupervision = () => {
                             <input type="file" className="btn_enviar" onChange={handleChange}/>
                         </div>
 
-                        <button disabled={!file} className="btn-secondary">Subir</button>
+                        <button disabled={!file} className="btn-secondary-custom">Subir</button>
                     </div>
                 </form>    
             )        

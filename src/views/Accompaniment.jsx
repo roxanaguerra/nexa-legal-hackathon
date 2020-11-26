@@ -27,12 +27,18 @@ const Accompaniment = () => {
                 { supervision ? 
                     <>
                         <Header name="Acompañamiento" />
-                        {
-                            dataSupervision.map((sup) => (
-                                <ListSupervision key={sup.id} setSupervision={setSupervision} dataSupervision={sup} />
-                            ))
-                        }
-                        <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                        <div className="title-newS">
+                            <h3>Registrar las supervisiones:</h3>
+                        </div>
+                        <div className="container-listCards-supervisions">
+                            {
+                                dataSupervision.map((sup) => (
+                                    <ListSupervision key={sup.id} setSupervision={setSupervision} dataSupervision={sup} />
+                                ))
+                            }
+
+                            <button className="btn-primary-custom" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                        </div>
                         <NavBar />
                     </>
                 : <div className='new-supervision-container'>
