@@ -10,13 +10,13 @@ const CreateActionPlan = ({infoSupervision}) => {
                 <h3>{infoSupervision.unidad}</h3>
                 <p>Fecha de Inicio: {infoSupervision.startDate}</p>
                 <p>Fecha de Cierre: {infoSupervision.expirationDate}</p>
-                {/* <Form.Group controlId="exampleForm.ControlSelect1">
-                    <Form.Control as="select" name="findings" value={} required >
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Control as="select" name="findings" value="" required >
                         <option value="selecciona">Selecciona Unidad</option>
                         <option value="Si">Si</option>
                         <option value="No">No</option>
                     </Form.Control>
-                </Form.Group> */}
+                </Form.Group>
             </div>
         </>
     );
