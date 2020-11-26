@@ -3,17 +3,62 @@
         {
             "id":1,
             "textQ": "¿Qué supervisiona OEFA?",
-            "textAnswer": "El cumplimiento de las obligaciones fiscalizables de los titulares de actividades económicas, establecidas en: La normativa legal vigente: Reglamentos de protección ambiental y normas sectoriales Normas ambientales generales. Estudios Ambientales preventivos y correctivos y sus modificaciones: Obligaciones ambientales. Obligaciones sociales"
+            "textAnswer": "El cumplimiento de las obligaciones fiscalizables de los titulares de actividades económicas, establecidas en: 1.- La normativa legal vigente: a) Reglamentos de protección ambiental y normas sectoriales b) Normas ambientales generales. 2.- Estudios Ambientales preventivos y correctivos y sus modificaciones: a) Obligaciones ambientales. b) Obligaciones sociales"
         },
         {
             "id":2,
             "textQ": "¿Qué temas están fuera del ámbito de la fiscalización ambiental a cargo de OEFA?",
-            "textAnswer": "rta PRUEBA1"
+            "textAnswer": "1.- La fiscalización de temas de seguridad y salud en el trabajo. 2.- La fiscalización e temas de seguridad de la infraestructura. 3.- Temas sanitarios referidos al control de la calidad del agua para consumo humano. 4.- Temas de saneamiento. 5.- Temas forestales. 6.- Fiscalización de obligaciones asumidas con el otorgamiento de autorizaciones administrativas. 7.- Inspecciones realizadas ex ante para el otorgamiento de autorizaciones administrativas e carácter ambiental."
         },
         {
             "id":3,
             "textQ": "¿Qué tipos de supervisión existen?",
-            "textAnswer": "rta PRUEBA2333"
+            "textAnswer": "REGULAR : Supervisión que se realiza de manera periódica y planificada. Se realiza en base a una planificación anual que elabora OEFA. ESPECIAL: Aquella que se realiza en atención a: - Emergencias ambientales. - Denuncias ambientales. - Solicitudes de intervención formuladas por organismos públicos. - Terminación de actividades total o parcial. - Verificación del cumplimiento de medidas administrativas ordenada por OEFA."
+        },
+        {
+            "id": 4,
+            "textQ": "¿Qué es la supervisión orientativa?",
+            "textAnswer": "1.- Aquella que tiene por objeto la promoción del cumplimiento de las obligaciones fiscalizables. 2.- Se realiza por única vez a la unidad fiscalizable que no haya sido supervisada con anterioridad por el OEFA; o cuando el administrado es una micro o pequeña empresa. 3.- No tiene fines punitivos, salvo que se identifiquen daños o riesgos ambientales significativos en las unidades fiscalizables para la estimación del riesgo ambiental del OEFA."
+        },
+        {
+            "id": 5,
+            "textQ": "¿Qué requiere la autoridad para acceder a una unidad fiscalizable?",
+            "textAnswer": "Considerando que las supervisiones se llevan a cabo de manera inopinada, sin previo aviso al administrado, el supervisor solo requiere portar las credenciales que lo identifiquen. El administrado está obligado a brindar al supervisor todas las facilidades para el traslado y acceso a la unidad fiscalizable, sin que medie dilación alguna. En la práctica, OEFA establece una tolerancia de espera para el ingreso de entre 10 a 15 minutos máximos."
+        },
+        {
+            "id": 6,
+            "textQ": "¿Qué sucede si se le niega el ingreso a la autoridad?",
+            "textAnswer": "En caso se niegue la entrada al local, el supervisor elaborará un Acta de Supervisión en el cual dejará constancia expresa de su imposibilidad de llevar a cabo la supervisión. Ello posteriormente, puede dar lugar al inicio de un procedimiento administrativo sancionador con la imposición de una multa, según se detalla en el punto de esta Guía. "
+        },
+        {
+            "id": 7,
+            "textQ": "¿Cuáles son las facultades del supervisor?",
+            "textAnswer": "1.- Requerir a los administrados la presentación de documentos, incluyendo facturas, recibos, comprobantes de pago, registros magnéticos/electrónicos, vinculados al cumplimiento de las obligaciones ambientales fiscalizables del administrado. 2.- Solicitar la participación de peritos y técnicos cuando lo estime necesario para el mejor desarrollo de las acciones de supervisión. 3.- Requerir copias de los archivos físicos y electrónicos. "
+        },
+        {
+            "id": 8,
+            "textQ": "¿Cuáles son las obligaciones del supervisor?",
+            "textAnswer": "1.- Identificarse con la credencial correspondiente en las acciones de supervisión. 2.- Cumplir con los requisitos de seguridad y salud en el trabajo, sin que ello implique la obstaculización de las labores de supervisión. 3.- Entregar copia del Acta de Supervisión al administrado o a la persona con quien se desarrolle la acción de supervisión."
+        },
+        {
+            "id": 9,
+            "textQ": "¿Qué deberes y derechos tienen los administrados?",
+            "textAnswer": "1.- Mantener em custodia toda la información vinculada al cumplimiento de sus obligaciones ambientales fiscalizables por un plazo de 5 años contados a partir de su emisión, debiendo entregarla al supervisor cuando éste requiera. 2.- Brindar todas las facilidades al supervisor para el traslado y acceso a la unidad fiscalizable, sin que se entorpezca u obstaculice las labores del supervisor."
+        },
+        {
+            "id": 10,
+            "textQ": "¿Qué sanciones pueden aplicarse a propósito de las supervisiones?",
+            "textAnswer": "A) No permitir el ingresso a los supervisores: - Multa: desde 2 hasta 200 UIT em caso de niegue el acceso. - Multa de hasta 50 UIT por demorar injustificadamente el ingresso. B) Brindar declaraciones falsas durante la supervisión: - Multa: desde 5 UIT hasta 500UIT. C) No brindar facilidades al supervisor: - Multa: de hasta 100 UIT. "
+        },
+        {
+            "id": 11,
+            "textQ": "¿Qué se debe verificar una vez concluida la supervisión?",
+            "textAnswer": "Concluida la supervisión, el Supervisor deberá entregar uma copia del Acta de Supervisión al administrado, la cual debe contener como mínimo, la siguiente información: a) Datos generales del administrado y de la unidad fiscalizable objeto de la supervisión. b) Tipo de supervisión. c) Fecha y hora de la acción de supervisión (inicio y cierre). d) Hechos o funciones verificadas. e) Áreas o componentes supervisados. f) Medios probatórios. "
+        },
+        {
+            "id": 12,
+            "textQ": "¿Qué ocurre a la conclusión de la supervisión?",
+            "textAnswer": "Culminada la ejecución de las acciones de supervisión, el supervisor procederá a elaborar el informe de supervisión que contiene el análisis de la información disponible para determinar si se recomenda (i) el inicio de um procedimento administrativo sancionador, (ii) el archivo de la supervisión y/o (iii) se emiten recomendaciones y medidas administrativas correspondientes. "
         }
     ]
 }

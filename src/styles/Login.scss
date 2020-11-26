@@ -16,7 +16,7 @@
     @media screen and (min-width: 1024px) {
         background-color: white;
         border-radius: 10px;
-        box-shadow:  2px 2px 4px #3c3c3c5f;
+        box-shadow:  $boxShadow;
         padding: 90px 50px;
     }
 }
@@ -26,7 +26,7 @@
     text-align: center;
     /* background-color: chartreuse; */
     img {
-        margin-bottom: 10%;
+        margin-bottom: 18%;
         width: 100%;
         height: auto;
         max-width: 300px;
@@ -39,10 +39,13 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    /* background-color: rgb(111, 94, 128) */;
     label {
         font-weight: bold;
         align-self: start;
+        margin: 0;
+        margin-left: 15px;
+        color: $secondaryColor;
+        font-size: 0.9em;
     }
     .input-login {
         font-family: $font;
@@ -52,8 +55,11 @@
         border: 2px solid #C4C4C4;
         border-radius: 3px;
     }
-
+    button {
+        margin: 10px 0;
+    }
     p {
+        color: $nexaOrange;
         text-align: center;
         font-size: 0.9em;
     }

@@ -1,0 +1,16 @@
+.subtitle {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 55px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:white;
+    border-bottom: 1px solid $ligthOrange;
+    h3 {
+        font-size: 1.2em;
+        text-align: center;
+        margin: 0;
+    }
+}

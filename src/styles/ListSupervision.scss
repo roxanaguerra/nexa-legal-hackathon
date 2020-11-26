@@ -1,6 +1,23 @@
 .list-cards {
-    
+    width: 90%;
+    background-color: white;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    margin: 10px 0;
 }
-.container-listCards-supervisions {
+
+.list-cards-container {
+    width: 80%;
+    p {
+        margin: 0;
+    }
+}
+
+.icon-upload {
+    color: $secondaryColor;
+}
+
+/* .container-listCards-supervisions {
     margin-top: 60px;
 }
+ */

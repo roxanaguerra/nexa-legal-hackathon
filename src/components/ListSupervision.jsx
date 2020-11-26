@@ -1,14 +1,32 @@
 import React from 'react'
 
-const ListSupervision = ({ setSupervision, supervision }) => {
+const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervision }) => {
 
+    console.log('list: ', dataSupervisions);
+    const handleClickCard = () => {
+        console.log('clickCard');
+        setSeeSupervision(true);
+        setInfoSupervision(dataSupervisions);
+    };
 
     return (
-        <div className="list-cards">
-            <div className="container-listCards-supervisions">
-                <p>Aún no tienes supervisiones registradas</p>
+        <div className="question-card" onClick={handleClickCard} >
+            <div>
+                <div>
+                    <i className="fas fa-exclamation-circle"></i>
+                </div>
+                <div>
+                    <i className="fas fa-cloud-upload-alt icon-upload"></i>
+                </div>
             </div>
-                <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+
+            <div className="list-cards-container">
+                <p>{dataSupervisions.unidad} - Supervisión {dataSupervisions.typeSupervision}</p>
+                <p>{dataSupervisions.startDate}</p>
+                <p>Estado: En {dataSupervisions.stateSupervision}</p>
+            </div>
+
+            <i className="fas fa-chevron-right icon-right"></i>
         </div>
     )
 }

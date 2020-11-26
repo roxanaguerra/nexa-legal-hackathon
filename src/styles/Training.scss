@@ -1,7 +1,12 @@
-.card-question {
-    margin-top: 80px;
-    width: 200px;
-    border: solid 2px #FF5000;
-    border-radius: 5px;
-    
+.card-question-container {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fq {
+    width: 90%;   
+    margin: 15px 0;
+    font-weight: bold;
 }

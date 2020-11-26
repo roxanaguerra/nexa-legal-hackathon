@@ -1,22 +1,13 @@
-import React,{ useState }  from 'react'
+import React from 'react'
 
-const QuestionCard= ({question, openModal})=> {
-
-    // const [modal, setModal] = useState(false);
-    // const closeModal = () => setModal(false);
-    // const openModal = () => setModal(true);
-// 
-    // prev => !prev
-
+const QuestionCard = ({question, openModal}) => {
     return (
-        <div className="card-question" onClick={openModal}>
-            <p>{question.textQ}</p>
-            {/* <p>{question.textAnswer}</p> */}
+        <div className="question-card" onClick={openModal}>
+            <i className="far fa-check-circle icon-left"></i>
+            <p className="question-text">{question.textQ}</p>
+            <i className="fas fa-chevron-right icon-right"></i>
         </div> 
     )
 }
 
 export default QuestionCard;
-
-
-// onClick={openModal}

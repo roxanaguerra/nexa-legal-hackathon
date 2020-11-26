@@ -3,7 +3,11 @@ import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
 import QuestionCard from '../components/QuestionCard';
+import Subtitle from '../components/Subtitle';
+import TextIndication from '../components/TextIndication';
+
 import dataQ from '../data/dataQuestion.json';
+import iconHoja from '../assets/images/icon-hoja.png'
 
 const Training = () => {
 
@@ -13,29 +17,38 @@ const Training = () => {
 
     return(
         <>
-            <Header name="Capacitación" /> 
-            
-            {dataQ.questions.map((question,index)=>{
-                return (
-                    <>
-                        <QuestionCard
-                            key ={'q' + index}
-                            question= {question}
-                            openModal={() => openModal('answer'+ index)}
-                        />  
-                        
-                        <Modal
-                            key ={'answer'+ index}
-                            a={question}
-                            modal={modal === 'answer'+ index}
-                            closeModal={closeModal} 
-                        />
-                    </>
-                )
-            })}            
+            <Header name="CAPACITACIÓN" /> 
+            <Subtitle text="Conoce tus derechos y obligaciones" />
+
+            <div className="card-question-container">
+                <TextIndication 
+                image={iconHoja}
+                text="Aquí encontrás respuestas a las cuestiones más frecuentes durante una supervisión." />
+
+                <p className="fq">Lista de preguntas frecuentes</p>
+
+                {dataQ.questions.map((question,index)=>{
+                    return (
+                        <>  
+                            <QuestionCard
+                                key ={'q' + index}
+                                question= {question}
+                                openModal={() => openModal('answer'+ index)}
+                            />
+
+                            <Modal
+                                key ={'answer'+ index}
+                                a={question}
+                                modal={modal === 'answer'+ index}
+                                closeModal={closeModal} 
+                            />
+                        </>
+                    )
+                })}  
+            </div>   
+
             <NavBar />
         </>
     )
 };
-
 export default Training;
