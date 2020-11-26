@@ -42,7 +42,7 @@ const Accompaniment = () => {
                     : 
                         <>
                             <Header name="ACOMPAÑAMIENTO" />
-                            <Subtitle text="Registra las supervisiones" />
+                            <Subtitle text="Registra las supervisiones" /> {/* Sequeda vista inicial */}
                             <div className="container-listCards-supervisions">
                                 {
                                     dataSupervisions.map((sup, index) => (

@@ -45,9 +45,9 @@ const NewSupervision = () =>{
 
     return (
         <div className="newSupervision">
-            <div className="title-newS">
+            {/* <div className="title-newS">
                     <h3>Ingresar datos de la supervisión:</h3>
-            </div>
+            </div> */}
 
             <div className="container-newSupervision">      
                 <Form className="form-container">
