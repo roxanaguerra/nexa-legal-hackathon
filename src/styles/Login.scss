@@ -16,7 +16,7 @@
     @media screen and (min-width: 1024px) {
         background-color: white;
         border-radius: 10px;
-        box-shadow:  2px 2px 4px #3c3c3c5f;
+        box-shadow:  $boxShadow;
         padding: 90px 50px;
     }
 }

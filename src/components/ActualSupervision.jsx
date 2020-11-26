@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
 import { storage } from '../controller/main';
 
-const ActualSupervision = () => {
+const ActualSupervision = ({infoSupervision}) => {
 
+    console.log('info: ', infoSupervision);
     return (
         <>
-            { !url ? (
-                <form onSubmit={handleUpload}>
-                    <div className="file-container">
-                        <div className="btn-file-container">
-                            <i className="fas fa-cloud-upload-alt"></i>
-                            <p className="btn-file-text">Credenciales supervisor</p>
-                            <input type="file" className="btn_enviar" onChange={handleChange}/>
-                        </div>
-
-                        <button disabled={!file} className="btn-secondary-custom">Subir</button>
-                    </div>
-                </form>    
-            )        
-            :
-            <div className="file-container">
-                <img src={url} alt={url} />
+            <div className="info-supervision">
+                <p>Fecha de Inicio: {infoSupervision.startDate}</p>
+                <p>Fecha de Cierre: {infoSupervision.expirationDate}</p>
+                <p>Objetivo: {infoSupervision.objective}</p>
+                <p>Lider: {infoSupervision.leader}</p>
+                <p>Alterno: {infoSupervision.alternate}</p>
+                <p>Toma de muestras: {infoSupervision.probing}</p>
+                <p>Área Operativa: {infoSupervision.operationalArea}</p>
+                <p>Observaciones: {infoSupervision.observations}</p>
+                <p>Block de notas:</p>
+                <textarea name="textarea" rows="3" cols="30"></textarea>
             </div>
-
-            }
         </>
     );
 };

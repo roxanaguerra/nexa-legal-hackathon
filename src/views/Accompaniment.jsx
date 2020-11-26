@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import firestore from '../controller/firestore';
+import Subtitle from '../components/Subtitle';
+
 // Importar componentes según estado
 import NewSupervision from '../components/NewSupervision';
 import ListSupervision from '../components/ListSupervision';
@@ -11,12 +13,13 @@ const Accompaniment = () => {
     
     const [supervision, setSupervision] = useState(true);
     const [seeSupervision, setSeeSupervision] = useState(false);
-    const [dataSupervision, setDataSupervision] = useState([]);
+    const [dataSupervisions, setDataSupervisions] = useState([]);
     const [stateSupervision, setStateSupervision] = useState('proceso');
+    const [infoSupervision, setInfoSupervision] = useState({});
 
     useEffect(() => {
         firestore.getSupervision(stateSupervision, (supervisionList) => {
-            setDataSupervision(supervisionList);
+            setDataSupervisions(supervisionList);
         //   console.log('supervisiones: ', supervisionList);
           // console.log('state2: ', stateOrder);
         });
@@ -34,17 +37,20 @@ const Accompaniment = () => {
                                 <i className="fas fa-arrow-left btn-back-i" ></i>
                             </button>
                             <Header name="Registrar Supervisión" />
-                            <ActualSupervision /> 
+                            <ActualSupervision infoSupervision={infoSupervision}/> 
                         </>
-                      : 
+                    : 
                         <>
-                            <Header name="Acompañamiento" />
-                            {
-                                dataSupervision.map((sup) => (
-                                    <ListSupervision key={sup.id} setSeeSupervision={setSeeSupervision} dataSupervision={sup} />
-                                ))
-                            }
-                            <button className="btn-secondary" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                            <Header name="ACOMPAÑAMIENTO" />
+                            <Subtitle text="Registra las supervisiones" /> {/* Sequeda vista inicial */}
+                            <div className="container-listCards-supervisions">
+                                {
+                                    dataSupervisions.map((sup, index) => (
+                                        <ListSupervision key={'cardSup' + index} setSeeSupervision={setSeeSupervision} dataSupervisions={sup} setInfoSupervision={setInfoSupervision} />
+                                    ))
+                                }
+                                <button className="btn-secondary-custom" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                            </div>
                             <NavBar />
                         </>
                     }
