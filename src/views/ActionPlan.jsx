@@ -33,7 +33,9 @@ const ActionPlan = () => {
                         <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
                     <Header name="Crear un plan de acción" />
+                    <Subtitle text={infoSupervision.unidad} />
                     <CreateActionPlan infoSupervision={infoSupervision}/> 
+                    {/* Supervisión {infoSupervision.typeSupervision} */}
                 </>
             :
                 <>
@@ -41,17 +43,19 @@ const ActionPlan = () => {
                     <Subtitle text="Gestiona tareas y crea soluciones" />
                     {
                         dataSupervisions === [] ? 
-                            <div className="content-text-indication">
+                            <div className="container-listCards-supervisions">
                                 <TextIndication 
                                     image={iconHoja}
                                     text="Aún no hay requerimientos de plan de acción." />
                             </div>
                         :
-                        <div className="margin-top">
+                        <div className="container-listCards-supervisions">
                             <TextIndication 
                                     image={iconHoja}
                                     text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
+                            
                             <p className="fq">Lista de requerimientos</p>
+
                             {
                                 dataSupervisions.map((sup, index) => (
                                     <ListSupervision key={'cardSup' + index} setSeeSupervision={setSeeSupervision} dataSupervisions={sup} setInfoSupervision={setInfoSupervision} />

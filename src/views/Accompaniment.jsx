@@ -61,7 +61,7 @@ const Accompaniment = () => {
                                     ))
                                 }
                                 <button className="btn-primary-custom" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
-                                </div>
+                            </div>
                                 <NavBar />
                             </>
                         }
