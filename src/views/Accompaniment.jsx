@@ -71,7 +71,7 @@ const Accompaniment = () => {
                         <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
                     <Header name="Registrar Supervisión" />
-                    <NewSupervision />
+                    <NewSupervision setSupervision={supervision} />
                 </div>}
             </div>
         </>

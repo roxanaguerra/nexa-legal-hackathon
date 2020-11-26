@@ -4,8 +4,10 @@ import firestore from '../controller/firestore';
 // import sendMail from '../cloud-functions-sendmail/functions/index';
 import { Button, Form } from "react-bootstrap";
 import Subtitle from '../components/Subtitle';
+import ModalConfirmation from '../components/ModalConfirmation';
+// import { useHistory } from 'react-router-dom';
 
-const NewSupervision = () => {
+const NewSupervision = ({setSupervision }) => {
     const initialStateSupervision = {
         unidad: '',
         typeSupervision: '',
@@ -20,8 +22,13 @@ const NewSupervision = () => {
         stateSupervision: 'proceso',
     };
 
+    // const history = useHistory();
     const [newSupervision, setNewSupervision] = useState(initialStateSupervision);
     const [confirmationSend, setConfirmationSend] = useState(false);
+
+    const [modal, setModal] = useState(false);
+    const closeModal = () => setModal(false);
+    const openModal = () => setModal(true);
 
 
     const addDocSupervision = (arraySupervision) => {
@@ -51,10 +58,14 @@ const NewSupervision = () => {
         pruebaCorreo(newSupervision);
         // console.log(newSupervision);
         addDocSupervision(newSupervision);
+        // setSupervision(false);
         setConfirmationSend(true);
-        setTimeout(() => {
-            setConfirmationSend(false)
-        }, 3000);
+        openModal();
+        setTimeout(() => {     
+            setConfirmationSend(false);
+            // history.push('/capacitacion');
+            window.location.reload();
+        }, 2000);
         setNewSupervision({ ...initialStateSupervision });
 
     };
@@ -131,13 +142,13 @@ const NewSupervision = () => {
                         REGISTRAR SUPERVISIÓN
                     </Button>
                 </Form>
-
                 {
                     confirmationSend ?
-                        <div className="confirmation">
-                            Guardado en Colección
-                    </div>
-                        : null
+                            <ModalConfirmation
+                                modal={modal}
+                                closeModal={closeModal} 
+                            />
+                    : null
                 }
             </div>
         </div>
