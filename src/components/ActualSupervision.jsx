@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import UploadImage from './UploadImage';
 import { storage } from '../controller/main';
 
 const ActualSupervision = ({infoSupervision}) => {
@@ -7,6 +8,7 @@ const ActualSupervision = ({infoSupervision}) => {
     return (
         <>
             <div className="info-supervision">
+                <UploadImage />
                 <p>Fecha de Inicio: {infoSupervision.startDate}</p>
                 <p>Fecha de Cierre: {infoSupervision.expirationDate}</p>
                 <p>Objetivo: {infoSupervision.objective}</p>
