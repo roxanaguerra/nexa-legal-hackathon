@@ -1,14 +1,7 @@
 import React from 'react';
-// import { storage } from '../controller/main';
+import { storage } from '../controller/main';
 
-const UploadImage = ({ file, setFile, url, setURL, handleChange, handleUpload}) => {
-
-    /*  const [file, setFile] = useState(null);
-    const [url, setURL] = useState(""); */
-
-    /* function handleChange(e) {
-        setFile(e.target.files[0]);
-    }
+const UploadImage = ({ file, setFile, url, setURL, categorie }) => {
 
     function handleUpload(e) {
         e.preventDefault();
@@ -19,33 +12,43 @@ const UploadImage = ({ file, setFile, url, setURL, handleChange, handleUpload}) 
             .child(file.name)
             .getDownloadURL()
             .then((url) => {
+                console.log(url)
                 setFile(null);
                 setURL(url);
             });
         });
-    } */
+    }
+
+    function handleChange(e) {
+        setFile(e.target.files[0]);
+    }
 
     return (
         <>
             { !url ? (
                 <form onSubmit={handleUpload}>
-                    <div className="file-container">
-                        <div className="btn-file-container">
-                            <i className="fas fa-cloud-upload-alt"></i>
-                            <p className="btn-file-text">Credenciales supervisor</p>
-                            <input type="file" className="btn_enviar" onChange={handleChange}/>
-                        </div>
-
-                        <button disabled={!file} className="btn-secondary">Subir</button>
+                <div className="file-container">
+                    <div className="btn-file-container">
+                        <i className="fas fa-cloud-upload-alt"></i>
+                        <p className="btn-file-text">{categorie}</p>
+                        <input type="file" className="btn_enviar" onChange={handleChange}/>
                     </div>
-                </form>    
+
+                    <button disabled={!file} className="btn-secondary-custom">Subir</button>
+                </div>
+            </form>
+
             )        
             :
             <div className="file-container">
-                <img src={url} alt={url} />
+                <div className="btn-file-container">
+                    <img src={url} alt="Documents" className="Documents"></img>
+                    {/* <iframe title="Documents" width="150" height="100" src={url}></iframe> */}
+                    <p className="btn-file-text btn-file-text-bottom">{categorie}</p>
+                </div>
             </div>
 
-            }
+            }        
         </>
     );
 };
