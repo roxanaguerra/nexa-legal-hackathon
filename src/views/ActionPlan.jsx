@@ -3,12 +3,11 @@ import firestore from '../controller/firestore';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
-// import UploadImage from '../components/UploadImage';
-// import NewActionPlan from '../components/NewActionPlan';
+import NewActionPlan from '../components/NewActionPlan';
 import TextIndication from '../components/TextIndication';
 import iconHoja from '../assets/images/icon-hoja.png'
 import ListSupervision from '../components/ListSupervision';
-import CreateActionPlan from '../components/CreateActionPlan';
+// import CreateActionPlan from '../components/CreateActionPlan';
 
 const ActionPlan = () => {
 
@@ -34,8 +33,9 @@ const ActionPlan = () => {
                     </button>
                     <Header name="Crear un plan de acción" />
                     <Subtitle text={infoSupervision.unidad} />
-                    <CreateActionPlan infoSupervision={infoSupervision}/> 
+                    {/* <CreateActionPlan infoSupervision={infoSupervision}/>  */}
                     {/* Supervisión {infoSupervision.typeSupervision} */}
+                    <NewActionPlan />
                 </>
             :
                 <>
@@ -66,7 +66,6 @@ const ActionPlan = () => {
                 </>
             }      
             <NavBar />
-            {/* <NewActionPlan /> */}
         </>
     )
 };
