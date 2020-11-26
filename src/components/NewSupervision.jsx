@@ -89,8 +89,8 @@ const NewSupervision = ({setSupervision }) => {
                     <Form.Group controlId="typeSupervision.ControlSelect1">
                         <Form.Control as="select" name="typeSupervision" onChange={handleInputChange} value={newSupervision.typeSupervision} required >
                             <option value="tipoSupervision">Selecciona tipo de supervisión</option>
-                            <option value="regular">Regular</option>
-                            <option value="especial">Especial</option>
+                            <option value="Regular">Regular</option>
+                            <option value="Especial">Especial</option>
                         </Form.Control>
                     </Form.Group>
 
