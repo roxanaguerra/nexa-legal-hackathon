@@ -2,8 +2,9 @@ import React, { useState, useEffect }from 'react';
 import firestore from '../controller/firestore';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
-import ActualSupervision from '../components/ActualSupervision';
 import Subtitle from '../components/Subtitle';
+// import UploadImage from '../components/UploadImage';
+// import NewActionPlan from '../components/NewActionPlan';
 import TextIndication from '../components/TextIndication';
 import iconHoja from '../assets/images/icon-hoja.png'
 import ListSupervision from '../components/ListSupervision';
@@ -61,6 +62,7 @@ const ActionPlan = () => {
                 </>
             }      
             <NavBar />
+            {/* <NewActionPlan /> */}
         </>
     )
 };

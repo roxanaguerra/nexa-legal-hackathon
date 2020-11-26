@@ -33,25 +33,28 @@ const Accompaniment = () => {
             <div>
                 { supervision ? 
                     <>
-                        { seeSupervision ?
-                            <>
-                                <button onClick={() => setSeeSupervision(false)} className="btn-back">
-                                    <i className="fas fa-arrow-left btn-back-i" ></i>
-                                </button>
-                                <Header name="Registrar Supervisión" />
-                                <ActualSupervision infoSupervision={infoSupervision}/> 
-                            </>
-                        : 
-                            <>
-                                <Header name="ACOMPAÑAMIENTO" />
-                                <Subtitle text="Registra las supervisiones" /> {/* Sequeda vista inicial */}
+                    { seeSupervision ?
+                        <>
+                            {/* VISTA SUPERVISIÓN ACTUAL */}
+                            <button onClick={() => setSeeSupervision(false)} className="btn-back">
+                                <i className="fas fa-arrow-left btn-back-i" ></i>
+                            </button>
+                            <Header name="Registrar Supervisión" />
+                            <ActualSupervision infoSupervision={infoSupervision}/> 
+                        </>
+                    : 
+                        <>
+                            {/* VISTA INICIAL */}
+                            <Header name="ACOMPAÑAMIENTO" />
+                            <Subtitle text="Registra las supervisiones" /> 
 
-                                <div className="container-listCards-supervisions">
+                            <div className="container-listCards-supervisions">
                                 <TextIndication 
-                                    image={iconHoja}
-                                    text="Sube la información y SUMA rapidez en en los proceso de sistematización de NEXA." />
+                                image={iconHoja}
+                                text="Sube la información y SUMA rapidez en en los proceso de sistematización de NEXA." />
 
                                 <p className="fq">Lista de acompañamientos</p>
+
                                 {
                                     dataSupervisions.map((sup, index) => (
                                         <ListSupervision key={'cardSup' + index} setSeeSupervision={setSeeSupervision} dataSupervisions={sup} setInfoSupervision={setInfoSupervision} />
