@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import firestore from '../controller/firestore';
+// import sendMail from '../cloud-functions-sendmail/functions/index';
 
 const NewSupervision = () =>{
     const initialStateSupervision = {
@@ -24,21 +26,34 @@ const NewSupervision = () =>{
         console.log(arraySupervision);
     };
 
+    const pruebaCorreo = (contenido )=>{
+        axios.post(`https://us-central1-nexa-lh.cloudfunctions.net/sendMail`, { contenido })
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        })
+    }
+
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewSupervision({ ...newSupervision, [name]: value });
     };
 
+
+
     // ADD NEW SUPERVISION
     const handleRegisterSupervision = (e) => {
         e.preventDefault();
-        // console.log(order);
+        pruebaCorreo(newSupervision);
+        // console.log(newSupervision);
         addDocSupervision(newSupervision);
         setConfirmationSend(true);
         setTimeout(() => {
             setConfirmationSend(false)
         },3000);
         setNewSupervision({ ...initialStateSupervision });
+
     };
 
     return (
