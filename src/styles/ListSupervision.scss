@@ -1,7 +1,20 @@
 .list-cards {
-    border: 2px solid red;
     width: 80%;
+    background-color: white;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    margin: 10px 0;
 }
-.container-listCards-supervisions {
+
+.list-cards-container {
+    padding: 10px;;
+
+    p {
+        margin: 0;
+    }
+}
+
+/* .container-listCards-supervisions {
     margin-top: 60px;
 }
+ */

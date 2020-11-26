@@ -10,7 +10,7 @@ const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervisi
 
     return (
         <div className="list-cards" onClick={handleClickCard} >
-            <div className="container-listCards-supervisions">
+            <div className="list-cards-container">
                 <p>{dataSupervisions.unidad} - Supervisión {dataSupervisions.typeSupervision}</p>
                 <p>{dataSupervisions.startDate}</p>
                 <p>{dataSupervisions.stateSupervision} - Evaluar Plan de Acción</p>
