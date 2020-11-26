@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nexa-legal-hackathon/static/css/main.b86f0ab0.chunk.css",
-    "main.js": "/nexa-legal-hackathon/static/js/main.ae525d8d.chunk.js",
-    "main.js.map": "/nexa-legal-hackathon/static/js/main.ae525d8d.chunk.js.map",
+    "main.js": "/nexa-legal-hackathon/static/js/main.ecc871e9.chunk.js",
+    "main.js.map": "/nexa-legal-hackathon/static/js/main.ecc871e9.chunk.js.map",
     "runtime-main.js": "/nexa-legal-hackathon/static/js/runtime-main.c3c28eef.js",
     "runtime-main.js.map": "/nexa-legal-hackathon/static/js/runtime-main.c3c28eef.js.map",
     "static/js/2.8116b49e.chunk.js": "/nexa-legal-hackathon/static/js/2.8116b49e.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.c3c28eef.js",
     "static/js/2.8116b49e.chunk.js",
     "static/css/main.b86f0ab0.chunk.css",
-    "static/js/main.ae525d8d.chunk.js"
+    "static/js/main.ecc871e9.chunk.js"
   ]
 }
