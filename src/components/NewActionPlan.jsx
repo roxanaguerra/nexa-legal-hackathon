@@ -43,7 +43,7 @@ const NewActionPlan = () => {
 
 
     return (
-        <div>
+        <div className="new-action-plan-container">
             <Form className="form-container">
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                     <Form.Label>Detallar Tarea</Form.Label>
