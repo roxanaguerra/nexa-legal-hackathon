@@ -2,8 +2,9 @@ import React from 'react'
 
 const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervision }) => {
 
-    // console.log('list: ', dataSupervisions);
+    console.log('list: ', dataSupervisions);
     const handleClickCard = () => {
+        console.log('clickCard');
         setSeeSupervision(true);
         setInfoSupervision(dataSupervisions);
     };
@@ -22,7 +23,8 @@ const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervisi
             <div className="list-cards-container">
                 <p>{dataSupervisions.unidad} - Supervisión {dataSupervisions.typeSupervision}</p>
                 <p>{dataSupervisions.startDate}</p>
-                <p>{dataSupervisions.stateSupervision} - Evaluar Plan de Acción</p>
+                <p>Estado: {dataSupervisions.stateSupervision}</p>
+                <p>Documentos: FALTAN SUBIR</p>
             </div>
 
             <i className="fas fa-chevron-right icon-right"></i>
