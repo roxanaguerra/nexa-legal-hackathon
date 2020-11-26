@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/nexa-legal-hackathon/static/css/main.b86f0ab0.chunk.css",
+    "main.js": "/nexa-legal-hackathon/static/js/main.3c31c08d.chunk.js",
+    "main.js.map": "/nexa-legal-hackathon/static/js/main.3c31c08d.chunk.js.map",
+    "runtime-main.js": "/nexa-legal-hackathon/static/js/runtime-main.c3c28eef.js",
+    "runtime-main.js.map": "/nexa-legal-hackathon/static/js/runtime-main.c3c28eef.js.map",
+    "static/js/2.788af83b.chunk.js": "/nexa-legal-hackathon/static/js/2.788af83b.chunk.js",
+    "static/js/2.788af83b.chunk.js.map": "/nexa-legal-hackathon/static/js/2.788af83b.chunk.js.map",
+    "static/js/3.b0bb9e83.chunk.js": "/nexa-legal-hackathon/static/js/3.b0bb9e83.chunk.js",
+    "static/js/3.b0bb9e83.chunk.js.map": "/nexa-legal-hackathon/static/js/3.b0bb9e83.chunk.js.map",
+    "index.html": "/nexa-legal-hackathon/index.html",
+    "static/css/main.b86f0ab0.chunk.css.map": "/nexa-legal-hackathon/static/css/main.b86f0ab0.chunk.css.map",
+    "static/js/2.788af83b.chunk.js.LICENSE.txt": "/nexa-legal-hackathon/static/js/2.788af83b.chunk.js.LICENSE.txt",
+    "static/media/icon-hoja.7edf859d.png": "/nexa-legal-hackathon/static/media/icon-hoja.7edf859d.png",
+    "static/media/logo-nexa-suma.f9a0e258.png": "/nexa-legal-hackathon/static/media/logo-nexa-suma.f9a0e258.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3c28eef.js",
+    "static/js/2.788af83b.chunk.js",
+    "static/css/main.b86f0ab0.chunk.css",
+    "static/js/main.3c31c08d.chunk.js"
+  ]
+}
