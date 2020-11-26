@@ -53,10 +53,10 @@ const NewSupervision = () =>{
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Control as="select" name="unidad" onChange={handleInputChange} value={newSupervision.unidad} required >
                             <option value="selecciona">Selecciona Unidad</option>
-                            <option value="atacocha">Atacocha</option>
-                            <option value="elporvenir">El Porvenir</option>
-                            <option value="cerrolindo">Cerro Lindo</option>
-                            <option value="cajamarquilla">Cajamarquilla</option>
+                            <option value="Atacocha">Atacocha</option>
+                            <option value="El Porvenir">El Porvenir</option>
+                            <option value="Cerro Lindo">Cerro Lindo</option>
+                            <option value="Cajamarquilla">Cajamarquilla</option>
                         </Form.Control>
                     </Form.Group>
 

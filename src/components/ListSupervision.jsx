@@ -22,7 +22,7 @@ const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervisi
             <div className="list-cards-container">
                 <p>{dataSupervisions.unidad} - Supervisión {dataSupervisions.typeSupervision}</p>
                 <p>{dataSupervisions.startDate}</p>
-                <p>{dataSupervisions.stateSupervision} - Evaluar Plan de Acción</p>
+                <p>Estado: En {dataSupervisions.stateSupervision}</p>
             </div>
 
             <i className="fas fa-chevron-right icon-right"></i>
