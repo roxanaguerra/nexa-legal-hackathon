@@ -4,6 +4,7 @@ import React from 'react';
 import Subtitle from './Subtitle';
 import UploadImage from './UploadImage';
 
+
 const ActualSupervision = ({infoSupervision}) => {
 
     console.log('info: ', infoSupervision);
