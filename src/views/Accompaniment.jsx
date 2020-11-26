@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import firestore from '../controller/firestore';
+import Subtitle from '../components/Subtitle';
+
 // Importar componentes según estado
 import NewSupervision from '../components/NewSupervision';
 import ListSupervision from '../components/ListSupervision';
+
 
 const Accompaniment = () => {
     
@@ -26,10 +29,8 @@ const Accompaniment = () => {
             <div>
                 { supervision ? 
                     <>
-                        <Header name="Acompañamiento" />
-                        <div className="title-newS">
-                            <h3>Registrar las supervisiones:</h3>
-                        </div>
+                        <Header name="ACOMPAÑAMIENTO" />
+                        <Subtitle text="Registra las supervisiones" />
                         <div className="container-listCards-supervisions">
                             {
                                 dataSupervision.map((sup) => (
