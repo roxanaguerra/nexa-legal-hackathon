@@ -3,12 +3,12 @@ import firestore from '../controller/firestore';
 import { Button, Form } from "react-bootstrap";
 import Subtitle from '../components/Subtitle';
 
-const NewSupervision = () =>{
+const NewSupervision = () => {
     const initialStateSupervision = {
         unidad: '',
         typeSupervision: '',
         startDate: '',
-        expirationDate: '',        
+        expirationDate: '',
         objective: '',
         leader: '',
         alternate: '',
@@ -40,7 +40,7 @@ const NewSupervision = () =>{
         setConfirmationSend(true);
         setTimeout(() => {
             setConfirmationSend(false)
-        },3000);
+        }, 3000);
         setNewSupervision({ ...initialStateSupervision });
     };
 
@@ -48,9 +48,9 @@ const NewSupervision = () =>{
         <div className="newSupervision">
             <Subtitle text="Ingresa la información" />
 
-            <div className="container-newSupervision">      
+            <div className="container-newSupervision">
                 <Form className="form-container">
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Group controlId="unit.ControlSelect">
                         <Form.Control as="select" name="unidad" onChange={handleInputChange} value={newSupervision.unidad} required >
                             <option value="selecciona">Selecciona Unidad</option>
                             <option value="Atacocha">Atacocha</option>
@@ -60,7 +60,7 @@ const NewSupervision = () =>{
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Group controlId="typeSupervision.ControlSelect1">
                         <Form.Control as="select" name="typeSupervision" onChange={handleInputChange} value={newSupervision.typeSupervision} required >
                             <option value="tipoSupervision">Selecciona tipo de supervisión</option>
                             <option value="regular">Regular</option>
@@ -68,29 +68,29 @@ const NewSupervision = () =>{
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group controlId="formBasicDate">
                         <Form.Label>Fecha de Inicio</Form.Label>
-                        <Form.Control type="date" placeholder="Fecha de inicio" onChange={handleInputChange} name="startDate" value={newSupervision.startDate} required/>
+                        <Form.Control type="date" placeholder="Fecha de inicio" onChange={handleInputChange} name="startDate" value={newSupervision.startDate} required />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group controlId="formBasicDate">
                         <Form.Label>Fecha de Fin</Form.Label>
-                        <Form.Control type="date"  placeholder="Fecha de Fin" onChange={handleInputChange} name="expirationDate" value={newSupervision.expirationDate} required/>
+                        <Form.Control type="date" placeholder="Fecha de Fin" onChange={handleInputChange} name="expirationDate" value={newSupervision.expirationDate} required />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder="Objetivo" onChange={handleInputChange} name="objective" value={newSupervision.objective} required/>
+                    <Form.Group controlId="formBasicObjective">
+                        <Form.Control type="text" placeholder="Objetivo" onChange={handleInputChange} name="objective" value={newSupervision.objective} required />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder="Lider" onChange={handleInputChange} name="leader" value={newSupervision.leader} required/>
+                    <Form.Group controlId="formBasicLider">
+                        <Form.Control type="text" placeholder="Lider" onChange={handleInputChange} name="leader" value={newSupervision.leader} required />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder="Alterno" onChange={handleInputChange} name="alternate" value={newSupervision.alternate} required/>
+                    <Form.Group controlId="formBasicAlterno">
+                        <Form.Control type="text" placeholder="Alterno" onChange={handleInputChange} name="alternate" value={newSupervision.alternate} required />
                     </Form.Group>
 
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Group controlId="probing.ControlSelect">
                         <Form.Control as="select" name="probing" onChange={handleInputChange} value={newSupervision.probing} required >
                             <option value="tipoSupervision">Toma de muestras</option>
                             <option value="Si">Si</option>
@@ -98,7 +98,7 @@ const NewSupervision = () =>{
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Group controlId="opetationalArea.ControlSelect">
                         <Form.Control as="select" name="operationalArea" onChange={handleInputChange} value={newSupervision.operationalArea} required >
                             <option value="tipoSupervision">Área Operativa</option>
                             <option value="Mina">Mina</option>
@@ -108,8 +108,9 @@ const NewSupervision = () =>{
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Control type="text" placeholder="Observaciones" onChange={handleInputChange} name="observations" value={newSupervision.observations} required />
+                    <Form.Group controlId="observations.ControlTextarea">
+                        <Form.Label>Example textarea</Form.Label>
+                        <Form.Control as="textarea" placeholder="Observaciones" rows={2} onChange={handleInputChange} name="observations" value={newSupervision.observations} required />
                     </Form.Group>
 
                     <Button className="btn-primary-custom" type="submit" onClick={handleRegisterSupervision} >
@@ -118,11 +119,11 @@ const NewSupervision = () =>{
                 </Form>
 
                 {
-                    confirmationSend ? 
-                    <div className="confirmation">
-                        Guardado en Colección
+                    confirmationSend ?
+                        <div className="confirmation">
+                            Guardado en Colección
                     </div>
-                    : null
+                        : null
                 }
             </div>
         </div>
