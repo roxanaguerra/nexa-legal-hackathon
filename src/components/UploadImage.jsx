@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { storage } from '../controller/main';
+import React from 'react';
+// import { storage } from '../controller/main';
 
-const UploadImage = () => {
+const UploadImage = ({ file, setFile, url, setURL, handleChange, handleUpload}) => {
 
-    const [file, setFile] = useState(null);
-    const [url, setURL] = useState("");
+    /*  const [file, setFile] = useState(null);
+    const [url, setURL] = useState(""); */
 
-    function handleChange(e) {
+    /* function handleChange(e) {
         setFile(e.target.files[0]);
     }
 
@@ -23,7 +23,7 @@ const UploadImage = () => {
                 setURL(url);
             });
         });
-    }
+    } */
 
     return (
         <>
