@@ -9,12 +9,23 @@ const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervisi
     };
 
     return (
-        <div className="list-cards" onClick={handleClickCard} >
+        <div className="question-card" onClick={handleClickCard} >
+            <div>
+                <div>
+                    <i className="fas fa-exclamation-circle"></i>
+                </div>
+                <div>
+                    <i className="fas fa-cloud-upload-alt icon-upload"></i>
+                </div>
+            </div>
+
             <div className="list-cards-container">
                 <p>{dataSupervisions.unidad} - Supervisión {dataSupervisions.typeSupervision}</p>
                 <p>{dataSupervisions.startDate}</p>
                 <p>{dataSupervisions.stateSupervision} - Evaluar Plan de Acción</p>
             </div>
+
+            <i className="fas fa-chevron-right icon-right"></i>
         </div>
     )
 }

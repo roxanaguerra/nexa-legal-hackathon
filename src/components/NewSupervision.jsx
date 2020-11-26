@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firestore from '../controller/firestore';
 import { Button, Form } from "react-bootstrap";
+import Subtitle from '../components/Subtitle';
 
 const NewSupervision = () =>{
     const initialStateSupervision = {
@@ -45,9 +46,7 @@ const NewSupervision = () =>{
 
     return (
         <div className="newSupervision">
-            <div className="title-newS">
-                    <h3>Ingresar datos de la supervisión:</h3>
-            </div>
+            <Subtitle text="Ingresa la información" />
 
             <div className="container-newSupervision">      
                 <Form className="form-container">
