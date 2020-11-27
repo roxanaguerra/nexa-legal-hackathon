@@ -16,7 +16,7 @@ const Accompaniment = () => {
     const [supervision, setSupervision] = useState(true);
     const [seeSupervision, setSeeSupervision] = useState(false);
     const [dataSupervisions, setDataSupervisions] = useState([]);
-    const [stateSupervision, setStateSupervision] = useState('proceso');
+    const [stateSupervision, setStateSupervision] = useState('EN PROCESO');
     const [infoSupervision, setInfoSupervision] = useState({});
 
     useEffect(() => {
