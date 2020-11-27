@@ -1,8 +1,6 @@
 .info-supervision-container {
     width: 100%;
-    /* margin-top: 80px; */
     margin-bottom: 50px;
-    /* background-color: aquamarine; */
     p {
         margin: 0;
     }
@@ -13,10 +11,9 @@
 }
 
 .images-container {
-    /* background-color: blueviolet; */
-    /* background-color: cadetblue; */
     width: 90%;
-    margin-top: 80px;
+    margin-top: 90px;
+    margin-left: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -33,12 +30,10 @@
     justify-content: space-between;
     align-items: flex-start;
     margin: 15px 0; 
-    /* background-color: pink; */ 
 }
 
 .row-child-containter {
     width: 45%;
-    /* background-color: aquamarine; */
 }
 
 .data-flex-column {
@@ -46,8 +41,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 15px 0;
-    /* background-color: pink; */
 }
 
 .title-data-supervision {

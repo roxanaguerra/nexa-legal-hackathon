@@ -7,6 +7,7 @@ import UploadImage from './UploadImage';
 
 const ActualSupervision = ({infoSupervision}) => {
 
+    // Estados imágenes
     const [fileCredentials, setFileCredentials] = useState(null);
     const [fileInfo, setFileInfo] = useState(null);
     const [fileActa, setFileActa] = useState(null);
@@ -15,63 +16,41 @@ const ActualSupervision = ({infoSupervision}) => {
     const [urlInfo, setUrlInfo] = useState("");
     const [urlActa, setUrlActa] = useState("");
     const [urlImages, setUrlImages] = useState("");
-    
-    /* const miObj = {file: "", url:""}
-    const [uploadFile, setUploadFile] = useState([]);
-    setUploadFile(...uploadFile, miObj) */
-
-
-    // const imagesCategories = ["Credenciales", "Información", "Acta cierre", "Fotos/videos"]
 
     console.log('info: ', infoSupervision);
     return (
         <>
             <Subtitle text="Sube la documentación" />
-
-            {/* <div className="images-container">
-                { 
-                imagesCategories.map((categorie, index) => (
-                    <UploadImage 
-                        key={'button' + index}
-                        categorie={categorie}
-                        file={file}
-                        setFile={setFile}
-                        url={url}
-                        setURL={setURL}
-                    />))
-                }    
-            </div> */}
-
+            
             <div className="images-container">
-                    <UploadImage 
-                        categorie="Credenciales"
-                        file={fileCredentials}
-                        setFile={setFileCredentials}
-                        url={urlCredentials}
-                        setURL={setUrlCredentials}
-                    />
-                    <UploadImage
-                        categorie="Información"
-                        file={fileInfo}
-                        setFile={setFileInfo}
-                        url={urlInfo}
-                        setURL={setUrlInfo}
-                    />
-                    <UploadImage 
-                        categorie="Acta cierre"
-                        file={fileActa}
-                        setFile={setFileActa}
-                        url={urlActa}
-                        setURL={setUrlActa}
-                    />
-                    <UploadImage
-                        categorie="Fotos/videos"
-                        file={fileImages}
-                        setFile={setFileImages}
-                        url={urlImages}
-                        setURL={setUrlImages}
-                    />  
-
+                <UploadImage 
+                    categorie="Credenciales"
+                    file={fileCredentials}
+                    setFile={setFileCredentials}
+                    url={urlCredentials}
+                    setURL={setUrlCredentials}
+                />   
+                <UploadImage
+                    categorie="Información"
+                    file={fileInfo}
+                    setFile={setFileInfo}
+                    url={urlInfo}
+                    setURL={setUrlInfo}
+                />
+                <UploadImage 
+                    categorie="Acta cierre"
+                    file={fileActa}
+                    setFile={setFileActa}
+                    url={urlActa}
+                    setURL={setUrlActa}
+                />
+                <UploadImage
+                    categorie="Fotos/videos"
+                    file={fileImages}
+                    setFile={setFileImages}
+                    url={urlImages}
+                    setURL={setUrlImages}
+                />  
             </div>
 
             <div className="info-supervision-container">

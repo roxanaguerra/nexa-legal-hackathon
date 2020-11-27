@@ -1,10 +1,9 @@
 import React from 'react';
 import { storage } from '../controller/main';
 
-const UploadImage = ({ file, setFile, url, setURL, categorie }) => {
+const UploadImage = ({ setFile, url, setURL, categorie }) => {
 
-    function handleUpload(e) {
-        e.preventDefault();
+    function handleUpload(file) {
         const uploadTask = storage.ref(`/images/${file.name}`).put(file);
         uploadTask.on("state_changed", console.log, console.error, () => {
             storage
@@ -13,41 +12,35 @@ const UploadImage = ({ file, setFile, url, setURL, categorie }) => {
             .getDownloadURL()
             .then((url) => {
                 console.log(url)
-                setFile(null);
                 setURL(url);
             });
         });
     }
 
     function handleChange(e) {
-        setFile(e.target.files[0]);
+        const fileDocument = e.target.files[0];
+        handleUpload(fileDocument);
+        setFile(fileDocument);
     }
 
     return (
         <>
             { !url ? (
-                <form onSubmit={handleUpload}>
-                <div className="file-container">
-                    <div className="btn-file-container">
-                        <i className="fas fa-cloud-upload-alt"></i>
-                        <p className="btn-file-text">{categorie}</p>
-                        <input type="file" className="btn_enviar" onChange={handleChange}/>
-                    </div>
-
-                    <button disabled={!file} className="btn-secondary-custom">Subir</button>
+                <div className="btn-file-container">
+                    <i className="fas fa-cloud-upload-alt"></i>
+                    <p className="btn-file-text">{categorie}</p>
+                    <input type="file" className="btn_enviar" onChange={handleChange}/>
                 </div>
-            </form>
-
             )        
             :
-            <div className="file-container">
                 <div className="btn-file-container">
-                    <img src={url} alt="Documents" className="Documents"></img>
-                    {/* <iframe title="Documents" width="150" height="100" src={url}></iframe> */}
-                    <p className="btn-file-text btn-file-text-bottom">{categorie}</p>
-                </div>
-            </div>
+                    <div className="documents-container">
+                        <img src={url} alt="Documents" className="documents"></img>
+                        {/* <iframe title="Documents" width="150" height="70" src={url}></iframe> */}
+                    </div>
 
+                    <p className="btn-file-text">{categorie}</p>
+                </div>
             }        
         </>
     );
