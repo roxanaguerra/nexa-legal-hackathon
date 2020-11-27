@@ -47,6 +47,7 @@ const Accompaniment = () => {
                     : 
                         <>
                             {/* VISTA INICIAL */}
+                            
                             <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
                             <Header name="ACOMPAÑAMIENTO" />
                             <Subtitle text="Registra las supervisiones" /> 
@@ -58,25 +59,35 @@ const Accompaniment = () => {
                                 text2="SUMA "
                                 text3="rapidez en en los proceso de sistematización de NEXA." />
 
-                                <p className="fq">Lista de acompañamientos</p>
-
                                 {
-                                    dataSupervisions.map((sup, index) => (
-                                        <ListSupervision 
-                                            key={'cardSup' + index} 
-                                            setSeeSupervision={setSeeSupervision} 
-                                            dataSupervisions={sup}
-                                            setInfoSupervision={setInfoSupervision}
-                                            type="Supervisión: "
-                                        />
-                                        
-                                    ))
+                                    dataSupervisions.length == 0 ?
+                                    <div className="container-text-indication">
+                                        <TextIndication 
+                                            image={iconHoja}
+                                            text1="Aún no tienes supervisiones registradas." />
+                                    </div>
+                                :
+                                <>
+                                    <p className="fq">Lista de acompañamientos</p>
+
+                                    {
+                                         dataSupervisions.map((sup, index) => (
+                                            <ListSupervision 
+                                                key={'cardSup' + index} 
+                                                setSeeSupervision={setSeeSupervision} 
+                                                dataSupervisions={sup}
+                                                setInfoSupervision={setInfoSupervision}
+                                                type="Supervisión: " />
+                                        ))
+                                    }
+                                </>
                                 }
+
                                 <button className="btn-primary-custom btn-margin-top" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
                             </div>
-                                <NavBarAcomp />
-                            </>
-                        }
+                            <NavBarAcomp />
+                        </>
+                    }
                     </>
                 : 
                     <>
