@@ -8,7 +8,7 @@ import Subtitle from '../components/Subtitle';
 import NewActionPlan from '../components/NewActionPlan';
 import TextIndication from '../components/TextIndication';
 import ListSupervision from '../components/ListSupervision';
-// import CreateActionPlan from '../components/CreateActionPlan';
+import CreateActionPlan from '../components/CreateActionPlan';
 import iconHoja from '../assets/images/icon-hoja.png'
 
 const ActionPlan = () => {
@@ -33,9 +33,9 @@ const ActionPlan = () => {
                     </button>
                     <Header name="Crear un plan de acción" />
                     <Subtitle text={infoSupervision.unidad} info={infoSupervision.typeSupervision} />
-                    {/* <CreateActionPlan infoSupervision={infoSupervision}/>  */}
+                    <CreateActionPlan infoSupervision={infoSupervision}/> 
                     {/* Supervisión {infoSupervision.typeSupervision} */}
-                    <NewActionPlan dataSupervisions={infoSupervision}/>
+                    {/* <NewActionPlan dataSupervisions={infoSupervision}/> */}
                 </>
             :
                 <>

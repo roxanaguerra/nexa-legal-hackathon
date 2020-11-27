@@ -34,13 +34,13 @@ const Training = () => {
                     return (
                         <>  
                             <QuestionCard
-                                key ={'q' + index}
+                                key ={'q'+index}
                                 question= {question}
                                 openModal={() => openModal('answer'+ index)}
                             />
 
                             <Modal
-                                key ={'answer'+ index}
+                                key ={'answer'+index}
                                 question={question}
                                 modal={modal === 'answer'+ index}
                                 closeModal={closeModal} 

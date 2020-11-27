@@ -31,13 +31,17 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         
         // getting dest email by query string
         // const dest = req.query.dest;
-        // const dest = 'rpiazzon@hotmail.com';
-        const dest = 'marcelacoronelp@gmail.com';
-        // const dest2 = 'anarativa09@gmail.com';
+       
+        const dest1 = 'marcelacoronelp@gmail.com';
+        const dest2 = 'anarativa09@gmail.com';
+        // const dest3 = 'sguerraapaza@gmail.com';
+        // const dest4 = 'sendy.fb@gmail.com';
+        // const dest5 = 'rpiazzon@hotmail.com';
 
         const mailOptions = {
             from: 'Nexa Ambiental', // Something like: Jane Doe <janedoe@gmail.com>
-            to: dest,
+            to: dest1,
+            to: dest2,
             subject: 'Llegó OEFA en', // email subject
             html: `<p>${unit}</p>
             <p style="font-size: 16px;">Nueva supervisión de OEFA registrada</p>
@@ -45,43 +49,43 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                 <tr >
                 <th style="background-color: #FF7536; color: #FFFFFF;" colspan="2">NUEVA SUPERVISIÓN de OEFA</th>
                 </tr>
-                <tr style="background-color: #dddddd">
+                <tr >
                 <th style="text-align: left;" style="background-color: #dddddd">Unidad</td>
                 <td>${unit}</td>
                 </tr>
-                <tr> 
+                <tr style="background-color: #dddddd"> 
                 <th style="text-align: left;">Tipo de Supervisión</td>
                 <td>${typeSupervision}</td>
                 </tr>
-                <tr style="background-color: #dddddd">   
+                <tr >   
                 <th style="text-align: left;">Fecha de inicio</td>
                 <td>${startDate}</td>
                 </tr>
-                <tr>
+                <tr style="background-color: #dddddd">
                 <th style="text-align: left;">Fecha de cierre</td>
                 <td>${expirationDate}</td>
                 </tr>
-                <tr style="background-color: #dddddd">
+                <tr >
                 <th style="text-align: left;">Objetivo</td>
                 <td>${objective}</td>
                 </tr>
-                <tr>
+                <tr style="background-color: #dddddd">
                 <th style="text-align: left;">Líder de Supervisión</td>
                 <td>${leader}</td>
                 </tr>
-                <tr style="background-color: #dddddd">
+                <tr >
                 <th style="text-align: left;">Alterno</td>
                 <td>${alternate}</td>
                 </tr>
-                <tr>
+                <tr style="background-color: #dddddd">
                 <th style="text-align: left;">Toma de muestras</td>
                 <td>${probing}</td>
                 </tr>
-                <tr style="background-color: #dddddd">
+                <tr >
                 <th style="text-align: left;">Áreas Operativas</td>
                 <td>${operationalArea}</td>
                 </tr>
-                <tr>
+                <tr style="background-color: #dddddd">
                 <th style="text-align: left;">Comentarios</td>
                 <td>${observations}</td>
             </tr>
