@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Importando componentes
-import NavBar from '../components/NavBar';
+import NavBarTrain from '../components/NavBarTrain';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
 import QuestionCard from '../components/QuestionCard';
@@ -50,7 +50,7 @@ const Training = () => {
                 })}  
             </div>   
 
-            <NavBar />
+            <NavBarTrain />
         </>
     )
 };

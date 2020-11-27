@@ -6,13 +6,13 @@ import iconCapacitacion from '../assets/images/icon-training.png';
 import iconAcompañamiento from '../assets/images/icon-accompaniment.png';
 import iconPlanAccion from '../assets/images/icon-plan.png';
 
-const NavBar = () => {
+const NavBarPlan = () => {
     return(
         <div className="nav-bar nav-bar-bottom">
             <Link to="/capacitacion">
                 <div className="nav-bar-item">
                     <img className="icon" src={iconCapacitacion} alt="capacitacion" />
-                    <p className="title-nav-bar item-active">Capacitación</p>
+                    <p className="title-nav-bar">Capacitación</p>
                 </div>
             </Link>    
             
@@ -25,11 +25,11 @@ const NavBar = () => {
             <Link to="/accion">
                 <div className="nav-bar-item">
                     <img className="icon" src={iconPlanAccion} alt="planAccion" />
-                    <p className="title-nav-bar">Plan de acción</p>
+                    <p className="title-nav-bar item-active">Plan de acción</p>
                 </div>
             </Link>
         </div>    
     )
 };
 
-export default NavBar;
+export default NavBarPlan;

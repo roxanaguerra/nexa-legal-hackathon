@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firestore from '../controller/firestore';
 
 // Importando componentes
-import NavBar from '../components/NavBar';
+import NavBarAcomp from '../components/NavBarAcomp';
 import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
 import TextIndication from '../components/TextIndication';
@@ -69,7 +69,7 @@ const Accompaniment = () => {
                                 }
                                 <button className="btn-primary-custom" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
                             </div>
-                                <NavBar />
+                                <NavBarAcomp />
                             </>
                         }
                     </>

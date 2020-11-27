@@ -2,7 +2,7 @@ import React, { useState, useEffect }from 'react';
 import firestore from '../controller/firestore';
 
 // Importando componentes
-import NavBar from '../components/NavBar';
+import NavBarPlan from '../components/NavBarPlan';
 import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
 import NewActionPlan from '../components/NewActionPlan';
@@ -68,7 +68,7 @@ const ActionPlan = () => {
                     }  
                 </>
             }      
-            <NavBar />
+            <NavBarPlan />
         </>
     )
 };
