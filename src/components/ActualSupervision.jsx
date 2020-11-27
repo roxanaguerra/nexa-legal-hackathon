@@ -34,7 +34,7 @@ const ActualSupervision = ({infoSupervision}) => {
 
     const [stateRelevantData, setStateRelevantData] = useState(initialStateSupervision);
 
-    const [confirmationSend, setConfirmationSend] = useState(false);
+    const [confirmationSendFinal, setConfirmationSendFinal] = useState(false);
     const [modal, setModal] = useState(false);
     const openModal = () => setModal(true);
 
@@ -50,10 +50,13 @@ const ActualSupervision = ({infoSupervision}) => {
 
     const generateActionPlan = (e) => {
         e.preventDefault();
-        setConfirmationSend(true);
+        setConfirmationSendFinal(true);
         openModal();
         updateDataOfSupervision(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
-        history.push('/accion');
+        setTimeout(() => {     
+            setConfirmationSendFinal(false);
+            history.push('/accion');
+        }, 2000);
     }
 
     return (
@@ -157,8 +160,8 @@ const ActualSupervision = ({infoSupervision}) => {
                 </div>
             </div>
             {
-                confirmationSend ?
-                    <ModalFinSupervision modal={modal} />
+                confirmationSendFinal ?
+                <ModalFinSupervision modal={modal} />
                 : null
             }
         </>
