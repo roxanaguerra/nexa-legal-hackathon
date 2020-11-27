@@ -8,7 +8,6 @@ import UploadImage from './UploadImage';
 import ModalFinSupervision from '../components/ModalFinSupervision';
 
 // Importando imágenes
-import userPhoto from '../assets/images/user-photo.jpg';
 import crediantialIcon from '../assets/images/icon-credentials.png';
 import documentIcon from '../assets/images/icon-document.png';
 import planIcon from '../assets/images/icon-plan.png';
@@ -61,7 +60,7 @@ const ActualSupervision = ({infoSupervision}) => {
 
     return (
         <>
-            <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
+            {/* <img src={userPhoto} alt="Foto usuario" className="icon-user"/> */}
             <Subtitle text="Sube la documentación" />
             
             <div className="images-container">

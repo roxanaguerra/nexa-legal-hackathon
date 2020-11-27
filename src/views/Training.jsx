@@ -11,7 +11,6 @@ import TextIndication from '../components/TextIndication';
 // Importando elementos
 import dataQ from '../assets/data/dataQuestion.json';
 import iconHoja from '../assets/images/icon-hoja.png';
-import userPhoto from '../assets/images/user-photo.jpg';
 
 const Training = () => {
 
@@ -21,7 +20,6 @@ const Training = () => {
 
     return(
         <>
-            <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
             <Header name="CAPACITACIÓN" /> 
             <Subtitle text="Conoce tus derechos y obligaciones" />
 

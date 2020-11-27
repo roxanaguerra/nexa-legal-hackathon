@@ -22,12 +22,17 @@ const UserProfile = () => {
     // console.log(error);
     });
 
+    const back = () => {
+        window.history.back();
+    }
+
     return (
+        <>
         <div className="container-userProfile">
             <Header name ="PERFIL"/>
 
             <button  className="btn-back">
-                <i className="fas fa-arrow-left btn-back-i" ></i>
+                <i className="fas fa-arrow-left btn-back-i" onClick={back} ></i>
             </button>
 
             <div className ="userPhoto-userProfile">
@@ -35,13 +40,11 @@ const UserProfile = () => {
             </div>  
 
             <div className="nameUser-userProfile">
-                <p>DIANA MADRID GÓMEZ</p>
+                <p>SENDY BAUTISTA</p>
             </div>
-            
-            <>
-                <p className="orange-text">Líder Unidad de Medio Ambiente</p>
-                <p>nexa.ambiente.20@gmail.com</p>
-            </>
+
+            <p className="orange-text">Líder Unidad de Medio Ambiente</p>
+            <p>nexa.ambiente.20@gmail.com</p>
 
             <div className="emailUser-userProfile"></div>
 
@@ -49,15 +52,16 @@ const UserProfile = () => {
                 <img src={logoNexaSuma}alt=""/>
             </div>
 
-            <div className="links-userProfile">
+            {/* <div className="links-userProfile">
                 <p>Perfil de Usuario</p>
                 <p>Notificaciones</p>
-            </div>
+            </div> */}
 
             <div className="close-userProfile">
                 <button onClick={signOut}>Cerrar Sesión</button>
             </div>
         </div>
+        </>
     )
 }
 

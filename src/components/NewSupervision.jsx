@@ -6,7 +6,6 @@ import firestore from '../controller/firestore';
 // Importando componentes
 import Subtitle from '../components/Subtitle';
 import ModalConfirmation from '../components/ModalConfirmation';
-import userPhoto from '../assets/images/user-photo.jpg';
 
 const NewSupervision = ({ setSupervision }) => {
     const initialStateSupervision = {
@@ -67,8 +66,7 @@ const NewSupervision = ({ setSupervision }) => {
 
     return (
         <div className="newSupervision">
-            <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
-            
+
             <Subtitle text="Ingresa la información" />
 
             <div className="container-newSupervision">

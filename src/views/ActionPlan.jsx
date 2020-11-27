@@ -1,7 +1,6 @@
 import React, { useState, useEffect }from 'react';
 import firestore from '../controller/firestore';
-import { useHistory } from 'react-router-dom';
-import userPhoto from '../assets/images/user-photo.jpg';
+
 
 // Importando componentes
 import NavBarPlan from '../components/NavBarPlan';
@@ -13,7 +12,6 @@ import CreateActionPlan from '../components/CreateActionPlan';
 import iconHoja from '../assets/images/icon-hoja.png'
 
 const ActionPlan = () => {
-    const history = useHistory();
 
     const [dataSupervisions, setDataSupervisions] = useState([]);
     const [stateSupervision, setStateSupervision] = useState('FINALIZADA');
@@ -26,10 +24,6 @@ const ActionPlan = () => {
         });
     }, [stateSupervision]);
 
-    const profile = () => {
-        history.push('/profile');
-    }
-
     return (
         <>
             { seeSupervision ?
@@ -37,14 +31,13 @@ const ActionPlan = () => {
                     <button onClick={() => setSeeSupervision(false)} className="btn-back">
                         <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
-                    <img src={userPhoto} alt="Foto usuario" className="icon-user" onClick={profile}/>
+                    
                     <Header name="Crear un plan de acción" />
                     <Subtitle text={infoSupervision.unidad} info={infoSupervision.typeSupervision} />
                     <CreateActionPlan infoSupervision={infoSupervision} /> 
                 </>
             :
                 <>
-                    <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
                     <Header name="PLAN DE ACCIÓN" />
                     <Subtitle text="Gestiona tareas y crea soluciones" />
                     <div className="container-text-indication">
