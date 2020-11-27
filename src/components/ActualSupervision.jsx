@@ -149,7 +149,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     </div>
 
                     <div className="data-flex-column">
-                        <p className="title-data-supervision">Observaciones iniciales:</p>
+                        <p className="title-data-supervision">Comentarios:</p>
                         <p>{infoSupervision.observations}</p>
                     </div>
 

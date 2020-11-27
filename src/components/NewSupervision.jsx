@@ -130,7 +130,7 @@ const NewSupervision = ({ setSupervision }) => {
                     </Form.Group>
 
                     <Form.Group controlId="observations.ControlTextarea">
-                        <Form.Control as="textarea" placeholder="Observaciones iniciales" rows={2} onChange={handleInputChange} name="observations" value={newSupervision.observations} required />
+                        <Form.Control as="textarea" placeholder="Comentarios" rows={2} onChange={handleInputChange} name="observations" value={newSupervision.observations} required />
                     </Form.Group>
 
                     <Button className="btn-primary-custom" type="submit" onClick={handleRegisterSupervision} >
