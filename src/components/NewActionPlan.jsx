@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Form } from "react-bootstrap";
 import firestore from '../controller/firestore';
+import ModalConfirmation from '../components/ModalConfirmation';
 
-const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
+const NewActionPlan = ({dataSupervisions, updateStateAction}) => {
 
     const initialStateActionPlan = {
         idSupervision:'',
@@ -17,6 +18,9 @@ const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
 
     const [newActionPlan, setActionPlan] = useState(initialStateActionPlan );
     const [sendConfirmation, setSendConfirmation] = useState(false);
+
+    const [modal, setModal] = useState(false);
+    const openModal = () => setModal(true);
 
     const addDocActionPlan = (arrayActionPlan) => {
         firestore.addActionPlan(arrayActionPlan);
@@ -33,9 +37,12 @@ const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
         e.preventDefault();
         addDocActionPlan(newActionPlan);
         setSendConfirmation(true);
-        handleFinalizeActionPlan('EN PROCESO');
+        // handleFinalizeActionPlan('EN PROCESO');
+        updateStateAction('EN PROCESO');
+        openModal();
         setTimeout(() => {
             setSendConfirmation(false);
+            window.location.reload();
         }, 3000);
         setActionPlan({ ...initialStateActionPlan });
     };
@@ -87,9 +94,7 @@ const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
 
             {
                 sendConfirmation ?
-                    <div className="confirmation">
-                        Guardado en Colección
-                    </div>
+                    <ModalConfirmation modal={modal} text="¡Nuevo plan de acción registrado!" />
                 : null
             }
         </div>
