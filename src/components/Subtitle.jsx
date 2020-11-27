@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Subtitle = ({ text }) => {
+const Subtitle = ({ text, info}) => {
     return(
         <>
             <div className="subtitle">
-                <h3>{text}</h3>
+                <h3>{text}  {info}</h3>
             </div>  
         </>
     )

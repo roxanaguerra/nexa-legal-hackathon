@@ -36,7 +36,7 @@ const NewSupervision = ({setSupervision }) => {
         console.log(arraySupervision);
     };
 
-    const pruebaCorreo = (contenido )=>{
+    const sendEmail = (contenido )=>{
         axios.post(`https://us-central1-nexa-lh.cloudfunctions.net/sendMail`, { contenido })
         .then(res => {
           console.log(res);
@@ -55,7 +55,7 @@ const NewSupervision = ({setSupervision }) => {
     // ADD NEW SUPERVISION
     const handleRegisterSupervision = (e) => {
         e.preventDefault();
-        pruebaCorreo(newSupervision);
+        sendEmail(newSupervision);
         // console.log(newSupervision);
         addDocSupervision(newSupervision);
         // setSupervision(false);

@@ -12,7 +12,7 @@ import ListSupervision from '../components/ListSupervision';
 const ActionPlan = () => {
 
     const [dataSupervisions, setDataSupervisions] = useState([]);
-    const [stateSupervision, setStateSupervision] = useState('pendiente');
+    const [stateSupervision, setStateSupervision] = useState('FINALIZADA');
     const [seeSupervision, setSeeSupervision] = useState(false);
     const [infoSupervision, setInfoSupervision] = useState({});
 
@@ -32,17 +32,17 @@ const ActionPlan = () => {
                         <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
                     <Header name="Crear un plan de acción" />
-                    <Subtitle text={infoSupervision.unidad} />
+                    <Subtitle text={infoSupervision.unidad} info={infoSupervision.typeSupervision} />
                     {/* <CreateActionPlan infoSupervision={infoSupervision}/>  */}
                     {/* Supervisión {infoSupervision.typeSupervision} */}
-                    <NewActionPlan />
+                    <NewActionPlan dataSupervisions={infoSupervision}/>
                 </>
             :
                 <>
                     <Header name="PLAN DE ACCIÓN" />
                     <Subtitle text="Gestiona tareas y crea soluciones" />
                     {
-                        dataSupervisions === [] ? 
+                        dataSupervisions.length == 0 ? 
                             <div className="container-listCards-supervisions">
                                 <TextIndication 
                                     image={iconHoja}
