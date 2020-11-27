@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ModalConfirmation = ({ modal }) => {
+const ModalConfirmation = ({ modal, text }) => {
 
     const showHideClassName = modal ? "modal display-block" : "modal display-none";
 
@@ -9,7 +9,7 @@ const ModalConfirmation = ({ modal }) => {
             <div className={showHideClassName}>
                 <section className="modal-main">
                     <i className="far fa-check-circle icon-confirmation"></i>
-                    <p className="modal-text-center">¡Nueva supervisión registrada!</p>
+                    <p className="modal-text-center">{text}</p>
                 </section>                
             </div>
         </>        

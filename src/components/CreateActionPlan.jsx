@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form } from "react-bootstrap";
 import firestore from '../controller/firestore';
 import NewActionPlan from '../components/NewActionPlan';
-import ModalConfirmationAction from '../components/ModalAction';
+import ModalConfirmation from '../components/ModalConfirmation';
 
 const CreateActionPlan = ({infoSupervision}) => {
 
@@ -29,8 +29,8 @@ const CreateActionPlan = ({infoSupervision}) => {
         setConfirmationSend(true);
         openModal();
         setTimeout(() => {     
-            // setConfirmationSend(false);
-            window.location.reload();
+            setConfirmationSend(false);
+            // window.location.reload();
         }, 2000);
     };
 
@@ -49,18 +49,23 @@ const CreateActionPlan = ({infoSupervision}) => {
                     </Form.Group>
                 </Form>
                 
-                {   findings.confirmation ==="" ? null 
+                {   findings.confirmation == "" ? null 
                     : 
-                        findings.confirmation === "Si" ? 
-
-                        <NewActionPlan dataSupervisions={infoSupervision} handleFinalizeActionPlan={finalizeActionPlan} />
-                    :
-                        <button className="btn-primary-custom" onClick={finalizeActionPlan('NO REQUIERE')}>FINALIZAR</button>
+                        <>
+                            {
+                                findings.confirmation === "Si" ? 
+                                    <NewActionPlan dataSupervisions={infoSupervision} updateStateAction={updateStateAction} />
+                                :
+                                    <>
+                                        <button className="btn-primary-custom" onClick={finalizeActionPlan('NO REQUIERE')}>FINALIZAR</button>
+                                    </>
+                            }
+                        </>
                 }
                 {
                     confirmationSend ?
-                        <ModalConfirmationAction modal={modal} />
-                    : null
+                    null
+                    : <ModalConfirmation modal={modal} text="No requiere un  plan de acción" />
                 }
 
             </div>

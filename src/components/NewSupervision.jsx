@@ -141,7 +141,7 @@ const NewSupervision = ({ setSupervision }) => {
                 </Form>
                 {
                     confirmationSend ?
-                        <ModalConfirmation modal={modal} />
+                        <ModalConfirmation modal={modal} text="¡Nueva supervisión registrada!"/>
                     : null
                 }
             </div>
