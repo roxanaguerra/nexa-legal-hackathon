@@ -75,7 +75,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileImages}
                     url={urlImages}
                     setURL={setUrlImages}
-                />  
+                />
             </div>
 
             <div className="info-supervision-container">
