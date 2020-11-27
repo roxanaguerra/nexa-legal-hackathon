@@ -26,10 +26,11 @@ const Training = () => {
             <div className="card-question-container">
                 <TextIndication 
                 image={iconHoja}
-                text="Aquí encontrás respuestas a las cuestiones más frecuentes durante una supervisión." />
+                text1="Aquí encontrás respuestas a las cuestiones más frecuentes durante una supervisión. " 
+                text2="SUMA "
+                text3="tus conocimientos." />
 
                 <p className="fq">Lista de preguntas frecuentes</p>
-
                 {dataQ.questions.map((question,index)=>{
                     return (
                         <>  
@@ -47,7 +48,27 @@ const Training = () => {
                             />
                         </>
                     )
-                })}  
+                })}
+
+                <p className="fq">GLOSARIO</p>
+                {dataQ.glossary.map((question,index)=>{
+                    return (
+                        <>  
+                            <QuestionCard
+                                key ={'g' + index}
+                                question= {question}
+                                openModal={() => openModal('glossary'+ index)}
+                            />
+
+                            <Modal
+                                key ={'glossary'+ index}
+                                question={question}
+                                modal={modal === 'glossary'+ index}
+                                closeModal={closeModal} 
+                            />
+                        </>
+                    )
+                })}   
             </div>   
 
             <NavBar />

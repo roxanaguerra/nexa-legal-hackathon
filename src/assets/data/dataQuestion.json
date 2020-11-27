@@ -60,5 +60,27 @@
             "textQ": "¿Qué ocurre a la conclusión de la supervisión?",
             "textAnswer": "Culminada la ejecución de las acciones de supervisión, el supervisor procederá a elaborar el informe de supervisión que contiene el análisis de la información disponible para determinar si se recomenda (i) el inicio de um procedimento administrativo sancionador, (ii) el archivo de la supervisión y/o (iii) se emiten recomendaciones y medidas administrativas correspondientes. "
         }
+    ],
+    "glossary": [
+        {
+            "id": 1,
+            "textQ": "ACTA DE SUPERVISIÓN",
+            "textAnswer": "Documento que consigna los hechos verificados en la acción de supervisión, así como las incidencias ocurridas durante el desarrollo."
+        },
+        {
+            "id": 2,
+            "textQ": "prueba1",
+            "textAnswer": "ttttttttttttttttttttttttttttttttttttttttt"
+        },
+        {
+            "id": 3,
+            "textQ": "prueba2",
+            "textAnswer": "yyyyyyyyyyyyyyyyyyyyy"
+        },
+        {
+            "id": 4,
+            "textQ": "prueba3",
+            "textAnswer": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+        }
     ]
 }
