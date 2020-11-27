@@ -19,31 +19,14 @@ const ActualSupervision = ({infoSupervision}) => {
     const [urlActa, setUrlActa] = useState("");
     const [urlImages, setUrlImages] = useState("");
     
-    /* const miObj = {file: "", url:""}
-    const [uploadFile, setUploadFile] = useState([]);
-    setUploadFile(...uploadFile, miObj) */
-
-
-    // const imagesCategories = ["Credenciales", "Información", "Acta cierre", "Fotos/videos"]
     const initialStateSupervision = {
-        // unidad: '',
-        // typeSupervision: '',
-        // startDate: '',
-        // expirationDate: '',
-        // objective: '',
-        // leader: '',
-        // alternate: '',
-        // probing: '',
-        // operationalArea: '',
-        // observations: '',
-        // stateSupervision: 'EN PROCESO',
         relevantData: '',
     };
-    const [prueba, setPrueba] = useState(initialStateSupervision);
+    const [stateRelevantData, setStateRelevantData] = useState(initialStateSupervision);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setPrueba({ ...prueba, [name]: value });
+        setStateRelevantData({ ...stateRelevantData, [name]: value });
         console.log(value);
     };
 
@@ -53,7 +36,7 @@ const ActualSupervision = ({infoSupervision}) => {
     };
 
     const generateActionPlan = () => {
-        updateDataOfSupersion(prueba.relevantData, 'FINALIZADA', 'PENDIENTE');
+        updateDataOfSupersion(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
         history.push('/accion');
     }
     return (
@@ -110,7 +93,7 @@ const ActualSupervision = ({infoSupervision}) => {
                 <div className="info-supervision">
                     <div className="data-flex-column">
                         <p className="title-data-supervision">Datos relevantes:</p>
-                        <textarea name="relevantData" rows="3" cols="40" onChange={handleInputChange} value={prueba.relevantData} placeholder="Anota la información importante de la supervisión">
+                        <textarea name="relevantData" rows="3" cols="40" onChange={handleInputChange} value={stateRelevantData.relevantData} placeholder="Anota la información importante de la supervisión">
                         </textarea>
                     </div>
 
