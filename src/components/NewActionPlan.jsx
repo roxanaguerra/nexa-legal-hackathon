@@ -44,7 +44,7 @@ const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
         <div className="new-action-plan-container">
             <Form className="form-container">
                 <Form.Group controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Detallar Tarea</Form.Label>
+                    <Form.Label className="orange-text">Detallar Tarea</Form.Label>
                     <Form.Control as="textarea" rows={3} name="taskDetail" onChange={handleInputChange} value={newActionPlan.taskDetail}/>
                 </Form.Group>
 
@@ -71,12 +71,12 @@ const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
                 </Form.Group>
 
                 <Form.Group controlId="formBasicDate">
-                    <Form.Label>Fecha de Inicio de Plan de Acción</Form.Label>
+                    <Form.Label className="orange-text">Fecha de Inicio de Plan de Acción</Form.Label>
                     <Form.Control type="date" placeholder="Fecha de inicio" name="startDate" onChange={handleInputChange} value={newActionPlan.startDate} required />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicDate">
-                    <Form.Label>Cierre estimado de Plan de Acción</Form.Label>
+                    <Form.Label className="orange-text">Cierre estimado de Plan de Acción</Form.Label>
                     <Form.Control type="date" placeholder="Fecha de cierre" name="expirationDate" onChange={handleInputChange} value={newActionPlan.expirationDate} required />
                 </Form.Group> 
 

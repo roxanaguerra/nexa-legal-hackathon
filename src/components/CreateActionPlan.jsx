@@ -29,10 +29,10 @@ const CreateActionPlan = ({infoSupervision}) => {
 
     return (
         <>
-            <div className="info-supervision">
+            <div className="info-supervision-total">
                 <Form className="form-container-action-plan">
-                    <p>Fecha de Inicio: {infoSupervision.startDate}</p>
-                    <p>Fecha de Cierre: {infoSupervision.expirationDate}</p>
+                    <p className="orange-text">Fecha de Inicio: {infoSupervision.startDate}</p>
+                    <p className="orange-text">Fecha de Cierre: {infoSupervision.expirationDate}</p>
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Control as="select" name="confirmation" onChange={handleInputChange} value={findings.confirmation} required >
                             <option value="">Se presentaron hallazgos</option>
@@ -44,7 +44,7 @@ const CreateActionPlan = ({infoSupervision}) => {
                 
                 {   findings.confirmation ==="" ? null 
                     : 
-                         findings.confirmation === "Si" ? 
+                        findings.confirmation === "Si" ? 
 
                         <NewActionPlan dataSupervisions={infoSupervision} handleFinalizeActionPlan={finalizeActionPlan} />
                     :

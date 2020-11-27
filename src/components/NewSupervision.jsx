@@ -92,12 +92,12 @@ const NewSupervision = ({ setSupervision }) => {
                     </Form.Group>
 
                     <Form.Group controlId="formBasicDate">
-                        <Form.Label>Fecha de Inicio</Form.Label>
+                        <Form.Label className="orange-text">Fecha de Inicio</Form.Label>
                         <Form.Control type="date" placeholder="Fecha de inicio" onChange={handleInputChange} name="startDate" value={newSupervision.startDate} required />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicDate">
-                        <Form.Label>Fecha de Fin</Form.Label>
+                        <Form.Label className="orange-text">Fecha de Fin</Form.Label>
                         <Form.Control type="date" placeholder="Fecha de Fin" onChange={handleInputChange} name="expirationDate" value={newSupervision.expirationDate} required />
                     </Form.Group>
 
