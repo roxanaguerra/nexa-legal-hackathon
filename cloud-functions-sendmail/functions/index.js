@@ -32,16 +32,16 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         // getting dest email by query string
         // const dest = req.query.dest;
        
-        const dest1 = 'marcelacoronelp@gmail.com';
-        const dest2 = 'anarativa09@gmail.com';
+        // const dest1 = 'marcelacoronelp@gmail.com';
+        // const dest2 = 'anarativa09@gmail.com';
         // const dest3 = 'sguerraapaza@gmail.com';
-        // const dest4 = 'sendy.fb@gmail.com';
-        // const dest5 = 'rpiazzon@hotmail.com';
+        const dest4 = 'sendy.fb@gmail.com';
+        const dest5 = 'rpiazzon@hotmail.com';
 
         const mailOptions = {
             from: 'Nexa Ambiental', // Something like: Jane Doe <janedoe@gmail.com>
-            to: dest1,
-            to: dest2,
+            to: dest5,
+            to: dest4,
             subject: 'Llegó OEFA en', // email subject
             html: `<p>${unit}</p>
             <p style="font-size: 16px;">Nueva supervisión de OEFA registrada</p>
