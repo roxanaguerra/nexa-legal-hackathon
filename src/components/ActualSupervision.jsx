@@ -47,7 +47,10 @@ const ActualSupervision = ({infoSupervision}) => {
         setConfirmationSend(true);
         openModal();
         updateDataOfSupervision(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
-        history.push('/accion');
+        setTimeout(() => {     
+            setConfirmationSend(false);
+            history.push('/accion');
+        }, 2000);
     }
 
     return (
