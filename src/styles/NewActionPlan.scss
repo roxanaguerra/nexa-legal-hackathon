@@ -1,6 +1,21 @@
-.new-action-plan-container {
-    margin-top: 90px;
+.info-supervision {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+}
+
+.new-action-plan-container {
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-container-action-plan {
+    width: 90%;
+    margin-top: 90px;
 }
