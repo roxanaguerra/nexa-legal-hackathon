@@ -50,13 +50,13 @@ const ActionPlan = () => {
                     </div>
                     {
                         dataSupervisions.length == 0 ? 
-                            <div className="container-text-indication">
-                                <TextIndication 
-                                    image={iconHoja}
-                                    text1="Aún no hay requerimientos de plan de acción."
-                                    text2=""
-                                    text3="" />
+                            <div className="container-vw">
+                                <div className="container-no-supervisions">
+                                    <img src={iconHoja} alt="Ícono NEXA" className="icon-nexa"/>
+                                    <p>Aún no hay requerimientos de plan de acción.</p>
+                                </div> 
                             </div>
+                            
                         :
                         <div className="container-listCards-action">
                             <p className="fq">Lista de requerimientos</p>
