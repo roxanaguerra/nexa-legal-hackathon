@@ -32,10 +32,10 @@ const ActionPlan = () => {
                         <i className="fas fa-arrow-left btn-back-i" ></i>
                     </button>
                     <Header name="Crear un plan de acción" />
-                    <Subtitle text={infoSupervision.unidad} />
+                    <Subtitle text={infoSupervision.unidad} info={infoSupervision.typeSupervision} />
                     {/* <CreateActionPlan infoSupervision={infoSupervision}/>  */}
                     {/* Supervisión {infoSupervision.typeSupervision} */}
-                    <NewActionPlan />
+                    <NewActionPlan dataSupervisions={infoSupervision}/>
                 </>
             :
                 <>
@@ -45,7 +45,7 @@ const ActionPlan = () => {
                         image={iconHoja}
                         text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
                     {
-                        dataSupervisions == [] ? 
+                        dataSupervisions.length == 0 ? 
                             <div className="container-listCards-supervisions">
                                 <TextIndication 
                                     image={iconHoja}

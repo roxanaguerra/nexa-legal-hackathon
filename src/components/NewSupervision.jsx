@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import firestore from '../controller/firestore';
-// import sendMail from '../cloud-functions-sendmail/functions/index';
 import { Button, Form } from "react-bootstrap";
 import Subtitle from '../components/Subtitle';
 import ModalConfirmation from '../components/ModalConfirmation';
@@ -38,11 +37,11 @@ const NewSupervision = ({setSupervision }) => {
         console.log(arraySupervision);
     };
 
-    const pruebaCorreo = (contenido )=>{
+    const sendEmail = (contenido )=>{
         axios.post(`https://us-central1-nexa-lh.cloudfunctions.net/sendMail`, { contenido })
         .then(res => {
-          console.log(res);
-          console.log(res.data);
+            console.log(res);
+            console.log(res.data);
         })
     }
 
@@ -58,8 +57,8 @@ const NewSupervision = ({setSupervision }) => {
     // ADD NEW SUPERVISION
     const handleRegisterSupervision = (e) => {
         e.preventDefault();
-        pruebaCorreo(newSupervision);
-        // Funcion para add en collection de firestore
+        sendEmail(newSupervision);
+        // console.log(newSupervision);
         addDocSupervision(newSupervision);
         // setSupervision(false);
         setConfirmationSend(true);

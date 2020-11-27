@@ -38,20 +38,58 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         const mailOptions = {
             from: 'Nexa Ambiental', // Something like: Jane Doe <janedoe@gmail.com>
             to: dest,
-            subject: 'NUEVA SUPERVISIÓN', // email subject
-            html: `<p style="font-size: 16px;">DATOS REGISTRADOS DE LA NUEVA SUPERVISIÓN</p>
-                <br /><p style="font-size: 16px;">Unidad:</p> <span>${unit}</span>
-                <br /><p style="font-size: 16px;">Tipo de Supervisión:</p> <span> ${typeSupervision }</span>
-                <br /><p style="font-size: 16px;">Fecha de inicio:</p> <span>${startDate}</span>
-                <br /><p style="font-size: 16px;">Fecha de cierre:</p> <span> ${expirationDate}</span>
-                <br /><p style="font-size: 16px;">Objetivo:</p> <span>${objective}</span>
-                <br /><p style="font-size: 16px;">Líder:</p> <span>${leader}</span>
-                <br /><p style="font-size: 16px;">Alterno:</p> <span>${alternate}</span>
-                <br /><p style="font-size: 16px;">Toma de Muestras:</p><span>${probing}</span>
-                <br /><p style="font-size: 16px;">Área Operativa:</p> <span>${operationalArea}</span>
-                <br /><p style="font-size: 16px;">Observaciones:</p> <span>${observations }</span>
-                <br />
-                <br /> <img src="https://firebasestorage.googleapis.com/v0/b/nexa-lh.appspot.com/o/logo%2Flogo-nexa-suma.png?alt=media&token=92ce197a-1cf5-461a-beda-c02dac4b89df" style="width: 100px;"/>
+            subject: 'Llegó OEFA en', // email subject
+            html: `<p>${unit}</p>
+            <p style="font-size: 16px;">Nueva supervisión de OEFA registrada</p>
+            <table>
+                <tr >
+                <th style="background-color: #FF7536; color: #FFFFFF;" colspan="2">NUEVA SUPERVISIÓN de OEFA</th>
+                </tr>
+                <tr style="background-color: #dddddd">
+                <th style="text-align: left;" style="background-color: #dddddd">Unidad</td>
+                <td>${unit}</td>
+                </tr>
+                <tr> 
+                <th style="text-align: left;">Tipo de Supervisión</td>
+                <td>${typeSupervision}</td>
+                </tr>
+                <tr style="background-color: #dddddd">   
+                <th style="text-align: left;">Fecha de inicio</td>
+                <td>${startDate}</td>
+                </tr>
+                <tr>
+                <th style="text-align: left;">Fecha de cierre</td>
+                <td>${expirationDate}</td>
+                </tr>
+                <tr style="background-color: #dddddd">
+                <th style="text-align: left;">Objetivo</td>
+                <td>${objective}</td>
+                </tr>
+                <tr>
+                <th style="text-align: left;">Líder de Supervisión</td>
+                <td>${leader}</td>
+                </tr>
+                <tr style="background-color: #dddddd">
+                <th style="text-align: left;">Alterno</td>
+                <td>${alternate}</td>
+                </tr>
+                <tr>
+                <th style="text-align: left;">Toma de muestras</td>
+                <td>${probing}</td>
+                </tr>
+                <tr style="background-color: #dddddd">
+                <th style="text-align: left;">Áreas Operativas</td>
+                <td>${operationalArea}</td>
+                </tr>
+                <tr>
+                <th style="text-align: left;">Comentarios</td>
+                <td>${observations}</td>
+            </tr>
+            </table><br />
+                <div>
+                <span>Somos Nexa. Del mundo de la minería, al mundo de las personas.</span>
+                 <img src="https://firebasestorage.googleapis.com/v0/b/nexa-lh.appspot.com/o/logo%2Flogo-nexa-suma.png?alt=media&token=92ce197a-1cf5-461a-beda-c02dac4b89df" style="width: 100px;"/>
+                </div>
             ` // email content in HTML
         };
   
@@ -65,13 +103,3 @@ exports.sendMail = functions.https.onRequest((req, res) => {
     });    
 });
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
-
-
-// exports.sendMail = functions.https.onRequest((request, responde) => {});

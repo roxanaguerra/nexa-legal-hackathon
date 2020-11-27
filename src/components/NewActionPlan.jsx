@@ -3,7 +3,7 @@ import firestore from '../controller/firestore';
 import { Button, Form } from "react-bootstrap";
 
 
-const NewActionPlan = () => {
+const NewActionPlan = ({dataSupervisions}) => {
 
     const initialStateActionPlan = {
         idSupervision:'',
@@ -13,7 +13,7 @@ const NewActionPlan = () => {
         anotherResponsible: '',
         startDate: '',
         expirationDate: '',
-        stateSupervision: 'EN PROCESO',
+        stateAction: 'EN PROCESO',
     };
 
     const [newActionPlan, setActionPlan] = useState(initialStateActionPlan );
@@ -26,7 +26,7 @@ const NewActionPlan = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setActionPlan({ ...newActionPlan, [name]: value });
+        setActionPlan({ ...newActionPlan, [name]: value,idSupervision:dataSupervisions.id });
     };
 
      // ADD NEW ACTION PLAN
@@ -42,6 +42,7 @@ const NewActionPlan = () => {
     };
 
 
+
     return (
         <div className="new-action-plan-container">
             <Form className="form-container">
@@ -51,7 +52,7 @@ const NewActionPlan = () => {
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                    <Form.Control as="select" name="responsibleArea"  onChange={handleInputChange} value={newActionPlan.responsibleArea} required='true'>
+                    <Form.Control as="select" name="responsibleArea"  onChange={handleInputChange} value={newActionPlan.responsibleArea} required>
                         {/* <option value="responsibleArea">Área Responsable</option> */}
                         {/* <optgroup label="Área Responsable"> */}
                         <option value="">Área Responsable</option>
@@ -89,6 +90,8 @@ const NewActionPlan = () => {
                     CREAR PLAN DE ACCIÓN
                 </Button>
             </Form>
+                
+                
             {
                     sendConfirmation ?
                         <div className="confirmation">
