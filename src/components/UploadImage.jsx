@@ -1,7 +1,7 @@
 import React from 'react';
 import { storage } from '../controller/main';
 
-const UploadImage = ({ setFile, url, setURL, categorie, id }) => {
+const UploadImage = ({ setFile, url, setURL, categorie, id, icon }) => {
 
     function handleUpload(file) {
         const uploadTask = storage.ref(`/images/${file.name}`).put(file);
@@ -27,7 +27,7 @@ const UploadImage = ({ setFile, url, setURL, categorie, id }) => {
         <>
             { !url ? (
                 <label for={id} className="btn-file-container">
-                    <i className="fas fa-cloud-upload-alt"></i>
+                    <img src={icon} alt={icon} className="icon-upload"></img>
                     <p className="btn-file-text">{categorie}</p>
                     <input id={id} type="file" className="btn_enviar" onChange={handleChange}/>
                 </label>
