@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import firestore from '../controller/firestore';
+// import sendMail from '../cloud-functions-sendmail/functions/index';
 import { Button, Form } from "react-bootstrap";
 import Subtitle from '../components/Subtitle';
+import ModalConfirmation from '../components/ModalConfirmation';
+// import { useHistory } from 'react-router-dom';
 
-const NewSupervision = () => {
+const NewSupervision = ({setSupervision }) => {
     const initialStateSupervision = {
         unidad: '',
         typeSupervision: '',
@@ -18,8 +22,13 @@ const NewSupervision = () => {
         stateSupervision: 'proceso',
     };
 
+    // const history = useHistory();
     const [newSupervision, setNewSupervision] = useState(initialStateSupervision);
     const [confirmationSend, setConfirmationSend] = useState(false);
+
+    const [modal, setModal] = useState(false);
+    const closeModal = () => setModal(false);
+    const openModal = () => setModal(true);
 
 
     const addDocSupervision = (arraySupervision) => {
@@ -27,21 +36,38 @@ const NewSupervision = () => {
         console.log(arraySupervision);
     };
 
+    const pruebaCorreo = (contenido )=>{
+        axios.post(`https://us-central1-nexa-lh.cloudfunctions.net/sendMail`, { contenido })
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        })
+    }
+
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewSupervision({ ...newSupervision, [name]: value });
     };
 
+
+
     // ADD NEW SUPERVISION
     const handleRegisterSupervision = (e) => {
         e.preventDefault();
-        // console.log(order);
+        pruebaCorreo(newSupervision);
+        // console.log(newSupervision);
         addDocSupervision(newSupervision);
+        // setSupervision(false);
         setConfirmationSend(true);
-        setTimeout(() => {
-            setConfirmationSend(false)
-        }, 3000);
+        openModal();
+        setTimeout(() => {     
+            setConfirmationSend(false);
+            // history.push('/capacitacion');
+            window.location.reload();
+        }, 2000);
         setNewSupervision({ ...initialStateSupervision });
+
     };
 
     return (
@@ -63,8 +89,8 @@ const NewSupervision = () => {
                     <Form.Group controlId="typeSupervision.ControlSelect1">
                         <Form.Control as="select" name="typeSupervision" onChange={handleInputChange} value={newSupervision.typeSupervision} required >
                             <option value="tipoSupervision">Selecciona tipo de supervisión</option>
-                            <option value="regular">Regular</option>
-                            <option value="especial">Especial</option>
+                            <option value="Regular">Regular</option>
+                            <option value="Especial">Especial</option>
                         </Form.Control>
                     </Form.Group>
 
@@ -116,13 +142,13 @@ const NewSupervision = () => {
                         REGISTRAR SUPERVISIÓN
                     </Button>
                 </Form>
-
                 {
                     confirmationSend ?
-                        <div className="confirmation">
-                            Guardado en Colección
-                    </div>
-                        : null
+                            <ModalConfirmation
+                                modal={modal}
+                                closeModal={closeModal} 
+                            />
+                    : null
                 }
             </div>
         </div>

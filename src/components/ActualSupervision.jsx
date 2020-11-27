@@ -105,7 +105,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     </div>
 
                     <button className="btn-primary-custom" type="submit" onClick="" >
-                        GENERAL PLAN DE ACCIÓN
+                        GENERAR PLAN DE ACCIÓN
                     </button>
                 </div>
             </div>
