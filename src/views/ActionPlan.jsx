@@ -49,7 +49,7 @@ const ActionPlan = () => {
                         text3="tu compromiso con nuestro medio ambiente." />
                     </div>
                     {
-                        dataSupervisions.length == 0 ? 
+                        dataSupervisions.length === 0 ? 
                             <div className="container-text-indication">
                                 <TextIndication 
                                     image={iconHoja}

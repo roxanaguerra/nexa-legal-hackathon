@@ -60,7 +60,7 @@ const Accompaniment = () => {
                                 text3="rapidez en en los proceso de sistematización de NEXA." />
 
                                 {
-                                    dataSupervisions.length == 0 ?
+                                    dataSupervisions.length === 0 ?
                                     <div className="container-text-indication">
                                         <TextIndication 
                                             image={iconHoja}
