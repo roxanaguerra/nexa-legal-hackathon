@@ -17,7 +17,13 @@ const ListSupervision = ({ setSeeSupervision, dataSupervisions, setInfoSupervisi
             <div className="list-cards-container">
                 <p className="bold-text">{dataSupervisions.unidad} - Supervisión {dataSupervisions.typeSupervision}</p>
                 <p>{dataSupervisions.startDate}</p>
-                <p>{type} <span className="orange-text"> {dataSupervisions.stateSupervision}</span></p>
+                {
+                    type === 'Supervisión: ' ?
+                    <p>{type} <span className="orange-text"> {dataSupervisions.stateSupervision}</span></p>
+                    :
+                    <p>{type} <span className="orange-text"> {dataSupervisions.stateAction}</span></p>
+                }
+                
             </div>
 
             <i className="fas fa-chevron-right icon-right"></i>
