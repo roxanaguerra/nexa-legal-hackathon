@@ -58,7 +58,12 @@ const ActionPlan = () => {
 
                             {
                                 dataSupervisions.map((sup, index) => (
-                                    <ListSupervision key={'cardSup' + index} setSeeSupervision={setSeeSupervision} dataSupervisions={sup} setInfoSupervision={setInfoSupervision} />
+                                    <ListSupervision
+                                        key={'cardSup' + index}
+                                        setSeeSupervision={setSeeSupervision}
+                                        dataSupervisions={sup}
+                                        setInfoSupervision={setInfoSupervision}
+                                        type="Plan de acción:" />
                                 ))
                             }
                         </div>

@@ -2,8 +2,8 @@
     "questions": [
         {
             "id":1,
-            "textQ": "¿Qué supervisiona OEFA?",
-            "textAnswer": "El cumplimiento de las obligaciones fiscalizables de los titulares de actividades económicas, establecidas en: 1.- La normativa legal vigente: a) Reglamentos de protección ambiental y normas sectoriales b) Normas ambientales generales. 2.- Estudios Ambientales preventivos y correctivos y sus modificaciones: a) Obligaciones ambientales. b) Obligaciones sociales"
+            "textQ": "¿Qué supervisa OEFA?",
+            "textAnswer": "El cumplimiento de las obligaciones fiscalizables de los titulares de actividades económicas, establecidas en: 1.- La normativa legal vigente: a) Reglamentos de protección ambiental y normas sectoriales b) Normas ambientales generales. 2.- Estudios Ambientales preventivos y correctivos y sus modificaciones: a) Obligaciones ambientales. b) Obligaciones sociales."
         },
         {
             "id":2,

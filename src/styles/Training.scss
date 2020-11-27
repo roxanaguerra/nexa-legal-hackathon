@@ -1,5 +1,6 @@
 .card-question-container {
     margin-top: 110px;
+    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,4 +10,5 @@
     width: 90%;   
     margin: 15px 0;
     font-weight: bold;
+    color: $nexaOrange;
 }

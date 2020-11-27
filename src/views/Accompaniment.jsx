@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import firestore from '../controller/firestore';
 import Subtitle from '../components/Subtitle';
 import TextIndication from '../components/TextIndication';
-import iconHoja from '../assets/images/icon-hoja.png'
+import iconHoja from '../assets/images/icon-hoja.png';
 
 // Importar componentes según estado
 import NewSupervision from '../components/NewSupervision';
@@ -39,6 +39,7 @@ const Accompaniment = () => {
                             <button onClick={() => setSeeSupervision(false)} className="btn-back">
                                 <i className="fas fa-arrow-left btn-back-i" ></i>
                             </button>
+
                             <Header name="Registrar Supervisión" />
                             <ActualSupervision infoSupervision={infoSupervision}/> 
                         </>
@@ -57,7 +58,14 @@ const Accompaniment = () => {
 
                                 {
                                     dataSupervisions.map((sup, index) => (
-                                        <ListSupervision key={'cardSup' + index} setSeeSupervision={setSeeSupervision} dataSupervisions={sup} setInfoSupervision={setInfoSupervision} />
+                                        <ListSupervision 
+                                            key={'cardSup' + index} 
+                                            setSeeSupervision={setSeeSupervision} 
+                                            dataSupervisions={sup}
+                                            setInfoSupervision={setInfoSupervision}
+                                            type="Supervisión: "
+                                        />
+                                        
                                     ))
                                 }
                                 <button className="btn-primary-custom" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
