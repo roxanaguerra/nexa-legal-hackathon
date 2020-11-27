@@ -47,3 +47,13 @@ body {
 .bold-text {
     font-weight: bold;
 }
+
+.icon-user {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    position: fixed;
+    top: 7.5px;
+    right: 15px;
+    z-index: 99;
+}

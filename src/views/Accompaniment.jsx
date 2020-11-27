@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
 import TextIndication from '../components/TextIndication';
 import iconHoja from '../assets/images/icon-hoja.png';
+import userPhoto from '../assets/images/user-photo.jpg';
 
 // Importando componentes según estado
 import NewSupervision from '../components/NewSupervision';
@@ -35,6 +36,7 @@ const Accompaniment = () => {
                     { seeSupervision ?
                         <>
                             {/* VISTA SUPERVISIÓN ACTUAL */}
+
                             <button onClick={() => setSeeSupervision(false)} className="btn-back">
                                 <i className="fas fa-arrow-left btn-back-i" ></i>
                             </button>
@@ -45,6 +47,7 @@ const Accompaniment = () => {
                     : 
                         <>
                             {/* VISTA INICIAL */}
+                            <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
                             <Header name="ACOMPAÑAMIENTO" />
                             <Subtitle text="Registra las supervisiones" /> 
 

@@ -5,6 +5,7 @@ import firestore from '../controller/firestore';
 // Importando componentes
 import Subtitle from './Subtitle';
 import UploadImage from './UploadImage';
+import userPhoto from '../assets/images/user-photo.jpg';
 
 const ActualSupervision = ({infoSupervision}) => {
 
@@ -43,6 +44,7 @@ const ActualSupervision = ({infoSupervision}) => {
 
     return (
         <>
+            <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
             <Subtitle text="Sube la documentación" />
             
             <div className="images-container">
@@ -127,7 +129,7 @@ const ActualSupervision = ({infoSupervision}) => {
                         <p>{infoSupervision.observations}</p>
                     </div>
 
-                    <button className="btn-primary-custom" type="submit" onClick={generateActionPlan} >
+                    <button className="btn-primary-custom btn-margin-top" type="submit" onClick={generateActionPlan} >
                         GENERAR PLAN DE ACCIÓN
                     </button>
                 </div>
