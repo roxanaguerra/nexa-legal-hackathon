@@ -12,7 +12,7 @@ import ListSupervision from '../components/ListSupervision';
 const ActionPlan = () => {
 
     const [dataSupervisions, setDataSupervisions] = useState([]);
-    const [stateSupervision, setStateSupervision] = useState('pendiente');
+    const [stateSupervision, setStateSupervision] = useState('FINALIZADA');
     const [seeSupervision, setSeeSupervision] = useState(false);
     const [infoSupervision, setInfoSupervision] = useState({});
 
@@ -41,8 +41,11 @@ const ActionPlan = () => {
                 <>
                     <Header name="PLAN DE ACCIÓN" />
                     <Subtitle text="Gestiona tareas y crea soluciones" />
+                    <TextIndication 
+                                    image={iconHoja}
+                                    text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
                     {
-                        dataSupervisions === [] ? 
+                        dataSupervisions == [] ? 
                             <div className="container-listCards-supervisions">
                                 <TextIndication 
                                     image={iconHoja}
@@ -50,12 +53,7 @@ const ActionPlan = () => {
                             </div>
                         :
                         <div className="container-listCards-supervisions">
-                            <TextIndication 
-                                    image={iconHoja}
-                                    text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
-                            
                             <p className="fq">Lista de requerimientos</p>
-
                             {
                                 dataSupervisions.map((sup, index) => (
                                     <ListSupervision key={'cardSup' + index} setSeeSupervision={setSeeSupervision} dataSupervisions={sup} setInfoSupervision={setInfoSupervision} />

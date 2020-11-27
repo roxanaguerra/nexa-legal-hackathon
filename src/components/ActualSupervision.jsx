@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 // import { storage } from '../controller/main';
 import Subtitle from './Subtitle';
 import UploadImage from './UploadImage';
-
+import firestore from '../controller/firestore';
+import { useHistory } from 'react-router-dom';
 
 const ActualSupervision = ({infoSupervision}) => {
+
+    const history = useHistory();
 
     const [fileCredentials, setFileCredentials] = useState(null);
     const [fileInfo, setFileInfo] = useState(null);
@@ -22,8 +25,37 @@ const ActualSupervision = ({infoSupervision}) => {
 
 
     // const imagesCategories = ["Credenciales", "Información", "Acta cierre", "Fotos/videos"]
+    const initialStateSupervision = {
+        // unidad: '',
+        // typeSupervision: '',
+        // startDate: '',
+        // expirationDate: '',
+        // objective: '',
+        // leader: '',
+        // alternate: '',
+        // probing: '',
+        // operationalArea: '',
+        // observations: '',
+        // stateSupervision: 'EN PROCESO',
+        relevantData: '',
+    };
+    const [prueba, setPrueba] = useState(initialStateSupervision);
 
-    console.log('info: ', infoSupervision);
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setPrueba({ ...prueba, [name]: value });
+        console.log(value);
+    };
+
+    const updateDataOfSupersion = (relevantData, stateSupervision, stateAction) => {
+        firestore.updateDataOfSupersion(infoSupervision.id, relevantData, stateSupervision, stateAction);
+        // console.log(info);
+    };
+
+    const generateActionPlan = () => {
+        updateDataOfSupersion(prueba.relevantData, 'FINALIZADA', 'PENDIENTE');
+        history.push('/accion');
+    }
     return (
         <>
             <Subtitle text="Sube la documentación" />
@@ -78,7 +110,7 @@ const ActualSupervision = ({infoSupervision}) => {
                 <div className="info-supervision">
                     <div className="data-flex-column">
                         <p className="title-data-supervision">Datos relevantes:</p>
-                        <textarea name="textarea" rows="3" cols="40" placeholder="Anota la información importante de la supervisión">
+                        <textarea name="relevantData" rows="3" cols="40" onChange={handleInputChange} value={prueba.relevantData} placeholder="Anota la información importante de la supervisión">
                         </textarea>
                     </div>
 
@@ -125,7 +157,7 @@ const ActualSupervision = ({infoSupervision}) => {
                         <p>{infoSupervision.observations}</p>
                     </div>
 
-                    <button className="btn-primary-custom" type="submit" onClick="" >
+                    <button className="btn-primary-custom" type="submit" onClick={generateActionPlan} >
                         GENERAR PLAN DE ACCIÓN
                     </button>
                 </div>

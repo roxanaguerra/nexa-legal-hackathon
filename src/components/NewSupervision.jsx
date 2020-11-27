@@ -19,7 +19,9 @@ const NewSupervision = ({setSupervision }) => {
         probing: '',
         operationalArea: '',
         observations: '',
-        stateSupervision: 'proceso',
+        stateSupervision: 'EN PROCESO',
+        stateAction: '',
+        relevantData: '',
     };
 
     // const history = useHistory();
@@ -48,6 +50,7 @@ const NewSupervision = ({setSupervision }) => {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewSupervision({ ...newSupervision, [name]: value });
+        console.log(value);
     };
 
 
@@ -56,7 +59,7 @@ const NewSupervision = ({setSupervision }) => {
     const handleRegisterSupervision = (e) => {
         e.preventDefault();
         pruebaCorreo(newSupervision);
-        // console.log(newSupervision);
+        // Funcion para add en collection de firestore
         addDocSupervision(newSupervision);
         // setSupervision(false);
         setConfirmationSend(true);
