@@ -1,0 +1,56 @@
+.container-userProfile{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.userPhoto-userProfile{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 120px;
+    img{
+        width: 150px;
+        border-radius: 50%;
+    }
+}
+
+.nameUser-userProfile{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: $text-medium;
+}
+
+.leader-userProfile p {
+    color: $ligthOrange;
+}
+
+.logo-userProfile {
+    width: 100%;
+    margin: 20px 0;
+    img {
+        width: 20%;
+    }
+}
+
+.links-userProfile {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.close-userProfile {
+    margin-top: 40px;
+    button{
+        width: 60%;
+        max-width: 340px;
+        height: 35px;
+        color: white;
+        font-family: $font;
+        font-size: 1em;
+        font-weight: bold;
+        border: none;
+        border-radius: $borderRadius;
+        background-color: $btnActive;
+        box-shadow: $boxShadow;
+    } 
+}

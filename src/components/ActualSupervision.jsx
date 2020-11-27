@@ -5,8 +5,14 @@ import firestore from '../controller/firestore';
 // Importando componentes
 import Subtitle from './Subtitle';
 import UploadImage from './UploadImage';
-import userPhoto from '../assets/images/user-photo.jpg';
 import ModalFinSupervision from '../components/ModalFinSupervision';
+
+// Importando imágenes
+import userPhoto from '../assets/images/user-photo.jpg';
+import crediantialIcon from '../assets/images/icon-credentials.png';
+import documentIcon from '../assets/images/icon-document.png';
+import planIcon from '../assets/images/icon-plan.png';
+import mobileIcon from '../assets/images/icon-mobile.png';
 
 const ActualSupervision = ({infoSupervision}) => {
 
@@ -14,12 +20,12 @@ const ActualSupervision = ({infoSupervision}) => {
 
     // Estados imágenes 
     const [fileCredentials, setFileCredentials] = useState(null);
-    const [fileInfo, setFileInfo] = useState(null);
-    const [fileActa, setFileActa] = useState(null);
-    const [fileImages, setFileImages] = useState(null);
     const [urlCredentials, setUrlCredentials] = useState("");
+    const [fileInfo, setFileInfo] = useState(null);
     const [urlInfo, setUrlInfo] = useState("");
+    const [fileActa, setFileActa] = useState(null);
     const [urlActa, setUrlActa] = useState("");
+    const [fileImages, setFileImages] = useState(null);
     const [urlImages, setUrlImages] = useState("");
     
     const initialStateSupervision = {
@@ -28,7 +34,7 @@ const ActualSupervision = ({infoSupervision}) => {
 
     const [stateRelevantData, setStateRelevantData] = useState(initialStateSupervision);
 
-    const [confirmationSend, setConfirmationSend] = useState(false);
+    const [confirmationSendFinal, setConfirmationSendFinal] = useState(false);
     const [modal, setModal] = useState(false);
     const openModal = () => setModal(true);
 
@@ -44,11 +50,11 @@ const ActualSupervision = ({infoSupervision}) => {
 
     const generateActionPlan = (e) => {
         e.preventDefault();
-        setConfirmationSend(true);
+        setConfirmationSendFinal(true);
         openModal();
         updateDataOfSupervision(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
         setTimeout(() => {     
-            setConfirmationSend(false);
+            setConfirmationSendFinal(false);
             history.push('/accion');
         }, 2000);
     }
@@ -65,6 +71,8 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileCredentials}
                     url={urlCredentials}
                     setURL={setUrlCredentials}
+                    id="fileCredentials"
+                    icon={crediantialIcon}
                 />   
                 <UploadImage
                     categorie="Información"
@@ -72,6 +80,8 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileInfo}
                     url={urlInfo}
                     setURL={setUrlInfo}
+                    id="fileInfo"
+                    icon={documentIcon}
                 />
                 <UploadImage 
                     categorie="Acta cierre"
@@ -79,6 +89,8 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileActa}
                     url={urlActa}
                     setURL={setUrlActa}
+                    id="fileActa"
+                    icon={planIcon}
                 />
                 <UploadImage
                     categorie="Fotos/videos"
@@ -86,6 +98,8 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileImages}
                     url={urlImages}
                     setURL={setUrlImages}
+                    id="fileImages"
+                    icon={mobileIcon}
                 />
             </div>
 
@@ -146,8 +160,8 @@ const ActualSupervision = ({infoSupervision}) => {
                 </div>
             </div>
             {
-                confirmationSend ?
-                    <ModalFinSupervision modal={modal} />
+                confirmationSendFinal ?
+                <ModalFinSupervision modal={modal} />
                 : null
             }
         </>

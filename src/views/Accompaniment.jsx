@@ -30,7 +30,6 @@ const Accompaniment = () => {
 
     return(
         <>
-            <div>
                 { supervision ? 
                     <>
                     { seeSupervision ?
@@ -60,7 +59,7 @@ const Accompaniment = () => {
                                 text3="rapidez en en los proceso de sistematización de NEXA." />
 
                                 {
-                                    dataSupervisions.length == 0 ?
+                                    dataSupervisions.length === 0 ?
                                         <div className="container-no-supervisions">
                                             <img src={iconHoja} alt="Ícono NEXA" className="icon-nexa"/>
                                             <p>Aún no tienes supervisiones registradas.</p>
@@ -97,7 +96,6 @@ const Accompaniment = () => {
                         <NewSupervision setSupervision={supervision} />
                     </>
                 }
-            </div>
         </>
     )
 };
