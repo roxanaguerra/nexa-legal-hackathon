@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { Form } from "react-bootstrap";
 
+import NewActionPlan from '../components/NewActionPlan';
+
 const CreateActionPlan = ({infoSupervision}) => {
 
     const [findings, setFindings] = useState({ confirmation: "" });
 
     const handleInputChange = (e) => {
-        // setFindings()
+        console.log(e.target.value);
         const { name, value } = e.target;
-        setFindings({ ...findings, [name]: value });
-        console.log(setFindings.confirmation);
+        setFindings({ [name]: value });
+       
     };
+
+    console.log(findings.confirmation);
 
     return (
         <>
@@ -26,6 +30,20 @@ const CreateActionPlan = ({infoSupervision}) => {
                         </Form.Control>
                     </Form.Group>
                 </Form>
+                
+                {   findings.confirmation ==="" ? null 
+                
+                    : 
+
+                         findings.confirmation === "Si" ? 
+
+                        <NewActionPlan dataSupervisions={infoSupervision}/>
+                    :
+                        <button>FINALIZAR</button>
+                }
+
+                
+
             </div>
         </>
     );

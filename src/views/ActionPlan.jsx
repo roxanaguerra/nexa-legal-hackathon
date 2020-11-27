@@ -6,7 +6,6 @@ import userPhoto from '../assets/images/user-photo.jpg';
 import NavBarPlan from '../components/NavBarPlan';
 import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
-import NewActionPlan from '../components/NewActionPlan';
 import TextIndication from '../components/TextIndication';
 import ListSupervision from '../components/ListSupervision';
 import CreateActionPlan from '../components/CreateActionPlan';
@@ -35,9 +34,7 @@ const ActionPlan = () => {
                     <img src={userPhoto} alt="Foto usuario" className="icon-user"/>
                     <Header name="Crear un plan de acción" />
                     <Subtitle text={infoSupervision.unidad} info={infoSupervision.typeSupervision} />
-                    
-                    <CreateActionPlan infoSupervision={infoSupervision}/>
-                    {/* <NewActionPlan dataSupervisions={infoSupervision}/> */}
+                    <CreateActionPlan infoSupervision={infoSupervision} /> 
                 </>
             :
                 <>

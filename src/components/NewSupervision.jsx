@@ -33,7 +33,7 @@ const NewSupervision = ({ setSupervision }) => {
 
     const addDocSupervision = (arraySupervision) => {
         firestore.addSupervision(arraySupervision);
-        console.log(arraySupervision);
+        // console.log(arraySupervision);
     };
 
     const sendEmail = (contenido )=>{
