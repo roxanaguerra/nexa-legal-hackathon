@@ -62,6 +62,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileCredentials}
                     url={urlCredentials}
                     setURL={setUrlCredentials}
+                    id="fileCredentials"
                 />   
                 <UploadImage
                     categorie="Información"
@@ -69,6 +70,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileInfo}
                     url={urlInfo}
                     setURL={setUrlInfo}
+                    id="fileInfo"
                 />
                 <UploadImage 
                     categorie="Acta cierre"
@@ -76,6 +78,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileActa}
                     url={urlActa}
                     setURL={setUrlActa}
+                    id="fileActa"
                 />
                 <UploadImage
                     categorie="Fotos/videos"
@@ -83,6 +86,7 @@ const ActualSupervision = ({infoSupervision}) => {
                     setFile={setFileImages}
                     url={urlImages}
                     setURL={setUrlImages}
+                    id="fileImages"
                 />
             </div>
 

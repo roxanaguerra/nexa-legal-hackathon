@@ -30,7 +30,6 @@ const Accompaniment = () => {
 
     return(
         <>
-            <div>
                 { supervision ? 
                     <>
                     { seeSupervision ?
@@ -97,7 +96,6 @@ const Accompaniment = () => {
                         <NewSupervision setSupervision={supervision} />
                     </>
                 }
-            </div>
         </>
     )
 };
