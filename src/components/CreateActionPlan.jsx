@@ -11,7 +11,6 @@ const CreateActionPlan = ({infoSupervision}) => {
         console.log(e.target.value);
         const { name, value } = e.target;
         setFindings({ [name]: value });
-       
     };
 
     console.log(findings.confirmation);
@@ -19,7 +18,7 @@ const CreateActionPlan = ({infoSupervision}) => {
     return (
         <>
             <div className="info-supervision">
-                <Form className="form-container">
+                <Form className="form-container-action-plan">
                     <p>Fecha de Inicio: {infoSupervision.startDate}</p>
                     <p>Fecha de Cierre: {infoSupervision.expirationDate}</p>
                     <Form.Group controlId="exampleForm.ControlSelect1">
@@ -35,11 +34,11 @@ const CreateActionPlan = ({infoSupervision}) => {
                 
                     : 
 
-                         findings.confirmation === "Si" ? 
+                        findings.confirmation === "Si" ? 
 
                         <NewActionPlan dataSupervisions={infoSupervision}/>
                     :
-                        <button>FINALIZAR</button>
+                        <button className="btn-primary-custom">FINALIZAR</button>
                 }
 
                 
