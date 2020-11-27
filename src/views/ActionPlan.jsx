@@ -42,8 +42,8 @@ const ActionPlan = () => {
                     <Header name="PLAN DE ACCIÓN" />
                     <Subtitle text="Gestiona tareas y crea soluciones" />
                     <TextIndication 
-                                    image={iconHoja}
-                                    text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
+                        image={iconHoja}
+                        text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
                     {
                         dataSupervisions == [] ? 
                             <div className="container-listCards-supervisions">
