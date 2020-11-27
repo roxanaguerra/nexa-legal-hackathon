@@ -8,9 +8,11 @@ import Training from './views/Training';
 import Accompaniment from './views/Accompaniment';
 import ActionPlan from './views/ActionPlan';
 import PageNotFound from './views/PageNotFound';
+import UserProfile from './views/UserProfile';
 
 // Importando estilos
 import './styles/index.scss';
+// import userProfile from './views/UserProfile';
 
 const App = () => (
     <Router>
@@ -24,7 +26,10 @@ const App = () => (
           <Accompaniment />
         </Route>        
         <Route path="/accion" component={ActionPlan} />
-        <Route component={PageNotFound} />
+        <Route path="/profile" >
+          <UserProfile/>
+        </Route>   
+        <Route component={PageNotFound} /> 
       </Switch>
     </HashRouter>
   </Router>
