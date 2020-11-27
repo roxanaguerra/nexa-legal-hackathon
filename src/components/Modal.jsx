@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Modal = ({modal, closeModal, a, setModal}) => {
+const Modal = ({ modal, closeModal, question }) => {
+
     const showHideClassName = modal ? "modal display-block" : "modal display-none";
-    
+
     return (
         <>
             <div className={showHideClassName}>
@@ -10,8 +11,8 @@ const Modal = ({modal, closeModal, a, setModal}) => {
                     <button onClick={closeModal} className="close-modal">
                         <i className="fas fa-times"></i>
                     </button>
-                    <h4>{a.textQ}</h4>
-                    <p>{a.textAnswer}</p>
+                    <h4>{question.textQ}</h4>
+                    <p>{question.textAnswer}</p>
                 </section>                
             </div>
         </>        

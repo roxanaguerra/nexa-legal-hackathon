@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import firestore from '../controller/firestore';
+
+// Importando componentes
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
-import firestore from '../controller/firestore';
 import Subtitle from '../components/Subtitle';
 import TextIndication from '../components/TextIndication';
 import iconHoja from '../assets/images/icon-hoja.png';
 
-// Importar componentes según estado
+// Importando componentes según estado
 import NewSupervision from '../components/NewSupervision';
 import ListSupervision from '../components/ListSupervision';
 import ActualSupervision from '../components/ActualSupervision';
@@ -22,12 +24,9 @@ const Accompaniment = () => {
     useEffect(() => {
         firestore.getSupervision(stateSupervision, (supervisionList) => {
             setDataSupervisions(supervisionList);
-        //   console.log('supervisiones: ', supervisionList);
-          // console.log('state2: ', stateOrder);
         });
     }, [stateSupervision]);
 
-    // NAVBAR
     return(
         <>
             <div>

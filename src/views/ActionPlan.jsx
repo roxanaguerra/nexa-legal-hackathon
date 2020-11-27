@@ -1,13 +1,15 @@
 import React, { useState, useEffect }from 'react';
 import firestore from '../controller/firestore';
+
+// Importando componentes
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Subtitle from '../components/Subtitle';
 import NewActionPlan from '../components/NewActionPlan';
 import TextIndication from '../components/TextIndication';
-import iconHoja from '../assets/images/icon-hoja.png'
 import ListSupervision from '../components/ListSupervision';
 // import CreateActionPlan from '../components/CreateActionPlan';
+import iconHoja from '../assets/images/icon-hoja.png'
 
 const ActionPlan = () => {
 
@@ -19,8 +21,6 @@ const ActionPlan = () => {
     useEffect(() => {
         firestore.getSupervision(stateSupervision, (supervisionList) => {
             setDataSupervisions(supervisionList);
-        //   console.log('supervisiones: ', supervisionList);
-          // console.log('state2: ', stateOrder);
         });
     }, [stateSupervision]);
 

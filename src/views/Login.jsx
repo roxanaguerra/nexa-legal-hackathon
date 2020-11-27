@@ -6,6 +6,7 @@ import { firebase } from '../controller/main';
 import logoNexa from '../assets/images/logo-nexa-suma.png';
 
 const Login = () => {
+
   const history = useHistory();
 
   const [email, setEmail] = useState('');
@@ -17,19 +18,16 @@ const Login = () => {
       history.push('/capacitacion');
       console.log('logueado');
     });
-    // console.log(email, password);
   };
-
 
   const handleChange = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
-    // console.log(email);
   };
+
   const handleChanged = (e) => {
     e.preventDefault();
     setPassword(e.target.value);
-    // console.log(password);
   };
 
   return (
@@ -38,6 +36,7 @@ const Login = () => {
         <div className="logo-login">
           <img src={logoNexa} alt="logo nexa" />
         </div>
+        
         <form action="" className="form-login">
           <label htmlFor="" >Correo electrónico</label>
           <input type="email" className="input-login" placeholder="Correo" value={email} onChange={handleChange}  required/>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Subtitle = ({ text, info}) => {
+const Subtitle = ({ text, info }) => {
     return(
         <>
             <div className="subtitle">

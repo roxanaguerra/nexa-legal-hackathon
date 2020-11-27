@@ -1,13 +1,16 @@
-import './styles/index.scss';
+import {
+  BrowserRouter as Router, Route, Switch, HashRouter,
+} from 'react-router-dom';
+
+// Importando vistas
 import Login from './views/Login';
 import Training from './views/Training';
 import Accompaniment from './views/Accompaniment';
 import ActionPlan from './views/ActionPlan';
 import PageNotFound from './views/PageNotFound';
-import {
-  BrowserRouter as Router, Route, Switch, HashRouter,
-} from 'react-router-dom';
-/* import 'bootstrap/dist/css/bootstrap.min.css'; */
+
+// Importando estilos
+import './styles/index.scss';
 
 const App = () => (
     <Router>

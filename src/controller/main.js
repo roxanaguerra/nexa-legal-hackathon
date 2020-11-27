@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
@@ -14,7 +13,7 @@ const firebaseConfig = {
     appId: "1:492935503772:web:62df276f3bc2fc3833b259"
 };
 
-// Initialize Firebase
+// Inicializar Firebase
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();

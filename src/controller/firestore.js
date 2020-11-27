@@ -1,12 +1,11 @@
 import { firebase } from './main';
 
-// COLECCIONES EN FIRESTORE
+// Colecciones en firestore
 const collectionSupervision = () => firebase.firestore().collection('Supervision');
 const collectionActionPlan= () => firebase.firestore().collection('Action');
 
-// AGREGAR DOCS A LA COLECCION SUPERVISION
+// Agregar docs a la colección Supervision
 const addSupervision = (data) => {
-    // console.log(data);
     collectionSupervision().add(data)
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
@@ -16,7 +15,7 @@ const addSupervision = (data) => {
       });
 };
 
-// LEER LOS DOCS DE LA COLECCION
+// Leer los docs de la colección
 const getSupervision = (stateSupervision, callback) => {
   collectionSupervision().where('stateSupervision', '==', stateSupervision).onSnapshot((query) => {
     const docs = [];
@@ -28,14 +27,13 @@ const getSupervision = (stateSupervision, callback) => {
   });
 };
 
-// ACTUALIZAR ESTADOS DE LA SUPERVISION Y DATOS
+// Actualizar estados de la supervisión y datos
 const updateDataOfSupersion = (id, relevantData, stateSupervision, stateAction) => collectionSupervision().doc(id).update({
   relevantData, stateSupervision, stateAction,
 });
 
-// AGREGAR DOCS A LA COLECCION PLAN DE ACCION - ACTIONPLAN
+// Agregar docs a la colección Plan de acción - Actionplan
 const addActionPlan = (data) => {
-  // console.log(data);
   collectionActionPlan().add(data)
     .then((docRef) => {
       console.log('Document written with ID: ', docRef.id);

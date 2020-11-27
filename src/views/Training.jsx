@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+// Importando componentes
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
@@ -6,7 +8,8 @@ import QuestionCard from '../components/QuestionCard';
 import Subtitle from '../components/Subtitle';
 import TextIndication from '../components/TextIndication';
 
-import dataQ from '../data/dataQuestion.json';
+// Importando elementos
+import dataQ from '../assets/data/dataQuestion.json';
 import iconHoja from '../assets/images/icon-hoja.png'
 
 const Training = () => {
@@ -38,7 +41,7 @@ const Training = () => {
 
                             <Modal
                                 key ={'answer'+ index}
-                                a={question}
+                                question={question}
                                 modal={modal === 'answer'+ index}
                                 closeModal={closeModal} 
                             />
@@ -51,4 +54,5 @@ const Training = () => {
         </>
     )
 };
+
 export default Training;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import firestore from '../controller/firestore';
 import { Button, Form } from "react-bootstrap";
-
+import firestore from '../controller/firestore';
 
 const NewActionPlan = ({dataSupervisions}) => {
 
@@ -29,10 +28,9 @@ const NewActionPlan = ({dataSupervisions}) => {
         setActionPlan({ ...newActionPlan, [name]: value,idSupervision:dataSupervisions.id });
     };
 
-     // ADD NEW ACTION PLAN
+     // Agregar nuevo plan de acción
     const handleRegisterActionPlan = (e) => {
         e.preventDefault();
-        // console.log(order);
         addDocActionPlan(newActionPlan);
         setSendConfirmation(true);
         setTimeout(() => {
@@ -40,8 +38,6 @@ const NewActionPlan = ({dataSupervisions}) => {
         }, 3000);
         setActionPlan({ ...initialStateActionPlan });
     };
-
-
 
     return (
         <div className="new-action-plan-container">
@@ -52,21 +48,18 @@ const NewActionPlan = ({dataSupervisions}) => {
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                    <Form.Control as="select" name="responsibleArea"  onChange={handleInputChange} value={newActionPlan.responsibleArea} required>
-                        {/* <option value="responsibleArea">Área Responsable</option> */}
-                        {/* <optgroup label="Área Responsable"> */}
+                    <Form.Control as="select" name="responsibleArea" onChange={handleInputChange} value={newActionPlan.responsibleArea} required>
                         <option value="">Área Responsable</option>
                         <option value="Almacén">Almacén</option>
                         <option value="Campamentos">Campamentos</option>
                         <option value="Mina">Mina</option>
                         <option value="Planta Concentradora">Planta Concentradora</option>
-                        {/* </optgroup> */}
                     </Form.Control>
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlSelect1">
                     <Form.Control as="select" name="responsibleLeader" defaultValue="Líder Responsable" onChange={handleInputChange} value={newActionPlan.responsibleLeader} required >
-                        {/* <option value="responsibleLeader">Líder Responsable</option> */}
+                        <option value="">Líder Responsable</option>
                         <option value="Daniel Fernandez Suárez">Daniel Fernandez Suárez</option>
                         <option value="Pedro Pérez">Pedro Pérez</option>
                     </Form.Control>
@@ -90,15 +83,14 @@ const NewActionPlan = ({dataSupervisions}) => {
                     CREAR PLAN DE ACCIÓN
                 </Button>
             </Form>
-                
-                
+
             {
-                    sendConfirmation ?
-                        <div className="confirmation">
-                            Guardado en Colección
+                sendConfirmation ?
+                    <div className="confirmation">
+                        Guardado en Colección
                     </div>
-                        : null
-                }
+                : null
+            }
         </div>
     )
 }

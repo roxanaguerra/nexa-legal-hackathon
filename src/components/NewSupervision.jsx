@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { Button, Form } from "react-bootstrap";
 import axios from 'axios';
 import firestore from '../controller/firestore';
-import { Button, Form } from "react-bootstrap";
+
+// Importando componentes
 import Subtitle from '../components/Subtitle';
 import ModalConfirmation from '../components/ModalConfirmation';
-// import { useHistory } from 'react-router-dom';
 
-const NewSupervision = ({setSupervision }) => {
+const NewSupervision = ({ setSupervision }) => {
     const initialStateSupervision = {
         unidad: '',
         typeSupervision: '',
@@ -23,14 +24,11 @@ const NewSupervision = ({setSupervision }) => {
         relevantData: '',
     };
 
-    // const history = useHistory();
     const [newSupervision, setNewSupervision] = useState(initialStateSupervision);
     const [confirmationSend, setConfirmationSend] = useState(false);
 
     const [modal, setModal] = useState(false);
-    const closeModal = () => setModal(false);
     const openModal = () => setModal(true);
-
 
     const addDocSupervision = (arraySupervision) => {
         firestore.addSupervision(arraySupervision);
@@ -45,31 +43,25 @@ const NewSupervision = ({setSupervision }) => {
         })
     }
 
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewSupervision({ ...newSupervision, [name]: value });
         console.log(value);
     };
 
-
-
-    // ADD NEW SUPERVISION
+    // Agregar nueva supervisión
     const handleRegisterSupervision = (e) => {
         e.preventDefault();
         sendEmail(newSupervision);
-        // console.log(newSupervision);
         addDocSupervision(newSupervision);
         // setSupervision(false);
         setConfirmationSend(true);
         openModal();
         setTimeout(() => {     
             setConfirmationSend(false);
-            // history.push('/capacitacion');
             window.location.reload();
         }, 2000);
         setNewSupervision({ ...initialStateSupervision });
-
     };
 
     return (
@@ -146,10 +138,7 @@ const NewSupervision = ({setSupervision }) => {
                 </Form>
                 {
                     confirmationSend ?
-                            <ModalConfirmation
-                                modal={modal}
-                                closeModal={closeModal} 
-                            />
+                        <ModalConfirmation modal={modal} />
                     : null
                 }
             </div>

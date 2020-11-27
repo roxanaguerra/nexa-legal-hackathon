@@ -3,8 +3,8 @@ import { Form } from "react-bootstrap";
 
 const CreateActionPlan = ({infoSupervision}) => {
 
-    // console.log('info: ', infoSupervision);
-    const [findings, setFindings] = useState({ confirmation: "" })
+    const [findings, setFindings] = useState({ confirmation: "" });
+
     const handleInputChange = (e) => {
         // setFindings()
         const { name, value } = e.target;

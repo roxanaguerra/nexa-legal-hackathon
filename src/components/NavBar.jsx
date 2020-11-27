@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//** Importación de elemetos */
+// Importando íconos
 import iconCapacitacion from '../assets/images/icon-training.png';
 import iconAcompañamiento from '../assets/images/icon-accompaniment.png';
 import iconPlanAccion from '../assets/images/icon-plan.png';

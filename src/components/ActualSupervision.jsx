@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-// import { storage } from '../controller/main';
+import { useHistory } from 'react-router-dom';
+import firestore from '../controller/firestore';
+
+// Importando componentes
 import Subtitle from './Subtitle';
 import UploadImage from './UploadImage';
-import firestore from '../controller/firestore';
-import { useHistory } from 'react-router-dom';
 
 const ActualSupervision = ({infoSupervision}) => {
 
@@ -22,6 +23,7 @@ const ActualSupervision = ({infoSupervision}) => {
     const initialStateSupervision = {
         relevantData: '',
     };
+
     const [stateRelevantData, setStateRelevantData] = useState(initialStateSupervision);
 
     const handleInputChange = (e) => {
@@ -32,7 +34,6 @@ const ActualSupervision = ({infoSupervision}) => {
 
     const updateDataOfSupersion = (relevantData, stateSupervision, stateAction) => {
         firestore.updateDataOfSupersion(infoSupervision.id, relevantData, stateSupervision, stateAction);
-        // console.log(info);
     };
 
     const generateActionPlan = () => {
