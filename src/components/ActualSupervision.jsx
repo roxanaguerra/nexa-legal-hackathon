@@ -56,7 +56,7 @@ const ActualSupervision = ({infoSupervision}) => {
         setTimeout(() => {     
             setConfirmationSendFinal(false);
             history.push('/accion');
-        }, 2000);
+        }, 4000);
     }
 
     return (
