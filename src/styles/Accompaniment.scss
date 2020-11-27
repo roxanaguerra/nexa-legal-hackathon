@@ -1,13 +1,20 @@
-/* .new-supervision-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-} */
-
 .container-listCards-supervisions {
     margin-top: 110px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-text-indication {
+    margin-top: 110px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-listCards-action {
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -25,4 +32,8 @@
         top: 12.5px;
         left: 15px;
     }
+}
+
+.btn-margin-top {
+    margin-top: 30px;
 }

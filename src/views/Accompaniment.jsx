@@ -67,19 +67,21 @@ const Accompaniment = () => {
                                         
                                     ))
                                 }
-                                <button className="btn-primary-custom" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
+                                <button className="btn-primary-custom btn-margin-top" onClick= {()=>{setSupervision(false)}}>NUEVA SUPERVISIÓN</button>
                             </div>
                                 <NavBarAcomp />
                             </>
                         }
                     </>
-                : <div className='new-supervision-container'>
-                    <button onClick={() => setSupervision(true)} className="btn-back">
-                        <i className="fas fa-arrow-left btn-back-i" ></i>
-                    </button>
-                    <Header name="Registrar Supervisión" />
-                    <NewSupervision setSupervision={supervision} />
-                </div>}
+                : 
+                    <>
+                        <button onClick={() => setSupervision(true)} className="btn-back">
+                            <i className="fas fa-arrow-left btn-back-i" ></i>
+                        </button>
+                        <Header name="Registrar Supervisión" />
+                        <NewSupervision setSupervision={supervision} />
+                    </>
+                }
             </div>
         </>
     )

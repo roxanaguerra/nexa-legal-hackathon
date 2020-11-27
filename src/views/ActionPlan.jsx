@@ -41,18 +41,21 @@ const ActionPlan = () => {
                 <>
                     <Header name="PLAN DE ACCIÓN" />
                     <Subtitle text="Gestiona tareas y crea soluciones" />
-                    <TextIndication 
+                    <div className="container-text-indication">
+                        <TextIndication 
                         image={iconHoja}
                         text="Crea un plan de acción y SUMA tu compromiso con nuestro medio ambiente." />
+                    </div>
+                    
                     {
                         dataSupervisions.length == 0 ? 
-                            <div className="container-listCards-supervisions">
+                            <div className="container-text-indication">
                                 <TextIndication 
                                     image={iconHoja}
                                     text="Aún no hay requerimientos de plan de acción." />
                             </div>
                         :
-                        <div className="container-listCards-supervisions">
+                        <div className="container-listCards-action">
                             <p className="fq">Lista de requerimientos</p>
                             {
                                 dataSupervisions.map((sup, index) => (

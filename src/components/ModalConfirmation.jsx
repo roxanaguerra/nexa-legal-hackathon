@@ -8,10 +8,8 @@ const ModalConfirmation = ({ modal }) => {
         <>
             <div className={showHideClassName}>
                 <section className="modal-main">
-                    {/* <button className="close-modal">
-                        <i className="fas fa-times"></i>
-                    </button> */}
-                    <p>Guardado en Colección</p>
+                    <i className="far fa-check-circle icon-confirmation"></i>
+                    <p className="modal-text-center">¡Nueva supervisión registrada!</p>
                 </section>                
             </div>
         </>        
