@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form } from "react-bootstrap";
-
+import firestore from '../controller/firestore';
 import NewActionPlan from '../components/NewActionPlan';
 
 const CreateActionPlan = ({infoSupervision}) => {
@@ -15,6 +15,18 @@ const CreateActionPlan = ({infoSupervision}) => {
     };
 
     console.log(findings.confirmation);
+
+    const updateStateAction = (stateAction) => {
+        firestore.updateStateAction(infoSupervision.id, stateAction);
+    };
+
+    const finalizeActionPlan = (state) => {
+        updateStateAction(state);
+        setTimeout(() => {     
+            // setConfirmationSend(false);
+            window.location.reload();
+        }, 2000);
+    };
 
     return (
         <>
@@ -32,17 +44,13 @@ const CreateActionPlan = ({infoSupervision}) => {
                 </Form>
                 
                 {   findings.confirmation ==="" ? null 
-                
                     : 
-
                          findings.confirmation === "Si" ? 
 
-                        <NewActionPlan dataSupervisions={infoSupervision}/>
+                        <NewActionPlan dataSupervisions={infoSupervision} handleFinalizeActionPlan={finalizeActionPlan} />
                     :
-                        <button>FINALIZAR</button>
+                        <button onClick={finalizeActionPlan('NO REQUIERE')}>FINALIZAR</button>
                 }
-
-                
 
             </div>
         </>

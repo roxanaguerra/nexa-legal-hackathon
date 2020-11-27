@@ -33,12 +33,12 @@ const ActualSupervision = ({infoSupervision}) => {
         console.log(value);
     };
 
-    const updateDataOfSupersion = (relevantData, stateSupervision, stateAction) => {
-        firestore.updateDataOfSupersion(infoSupervision.id, relevantData, stateSupervision, stateAction);
+    const updateDataOfSupervision = (relevantData, stateSupervision, stateAction) => {
+        firestore.updateDataOfSupervision(infoSupervision.id, relevantData, stateSupervision, stateAction);
     };
 
     const generateActionPlan = () => {
-        updateDataOfSupersion(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
+        updateDataOfSupervision(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
         history.push('/accion');
     }
 

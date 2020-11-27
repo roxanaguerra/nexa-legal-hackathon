@@ -27,9 +27,14 @@ const getSupervision = (stateSupervision, callback) => {
   });
 };
 
-// Actualizar estados de la supervisión y datos
-const updateDataOfSupersion = (id, relevantData, stateSupervision, stateAction) => collectionSupervision().doc(id).update({
+// Actualizar estados de la supervisión y datos relevantes
+const updateDataOfSupervision = (id, relevantData, stateSupervision, stateAction) => collectionSupervision().doc(id).update({
   relevantData, stateSupervision, stateAction,
+});
+
+// Actualizar estados de la supervisión(stateSupervision, stateAction)
+const updateStateAction = (id, stateAction) => collectionSupervision().doc(id).update({
+  stateAction,
 });
 
 // Agregar docs a la colección Plan de acción - Actionplan
@@ -46,6 +51,7 @@ const addActionPlan = (data) => {
 export default {
     addSupervision,
     getSupervision,
-    updateDataOfSupersion,
+    updateDataOfSupervision,
+    updateStateAction,
     addActionPlan,
 }

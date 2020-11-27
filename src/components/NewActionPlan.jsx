@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form } from "react-bootstrap";
 import firestore from '../controller/firestore';
 
-const NewActionPlan = ({dataSupervisions}) => {
+const NewActionPlan = ({dataSupervisions, handleFinalizeActionPlan}) => {
 
     const initialStateActionPlan = {
         idSupervision:'',
@@ -33,8 +33,9 @@ const NewActionPlan = ({dataSupervisions}) => {
         e.preventDefault();
         addDocActionPlan(newActionPlan);
         setSendConfirmation(true);
+        handleFinalizeActionPlan('EN PROCESO');
         setTimeout(() => {
-            setSendConfirmation(false)
+            setSendConfirmation(false);
         }, 3000);
         setActionPlan({ ...initialStateActionPlan });
     };
