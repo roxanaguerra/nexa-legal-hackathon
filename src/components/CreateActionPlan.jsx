@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { Form } from "react-bootstrap";
 import firestore from '../controller/firestore';
 import NewActionPlan from '../components/NewActionPlan';
+import ModalConfirmationAction from '../components/ModalAction';
 
 const CreateActionPlan = ({infoSupervision}) => {
 
     const [findings, setFindings] = useState({ confirmation: "" });
+
+    const [confirmationSend, setConfirmationSend] = useState(false);
+    const [modal, setModal] = useState(false);
+    const openModal = () => setModal(true);
 
     const handleInputChange = (e) => {
         console.log(e.target.value);
@@ -21,6 +26,8 @@ const CreateActionPlan = ({infoSupervision}) => {
 
     const finalizeActionPlan = (state) => {
         updateStateAction(state);
+        setConfirmationSend(true);
+        openModal();
         setTimeout(() => {     
             // setConfirmationSend(false);
             window.location.reload();
@@ -49,6 +56,11 @@ const CreateActionPlan = ({infoSupervision}) => {
                         <NewActionPlan dataSupervisions={infoSupervision} handleFinalizeActionPlan={finalizeActionPlan} />
                     :
                         <button className="btn-primary-custom" onClick={finalizeActionPlan('NO REQUIERE')}>FINALIZAR</button>
+                }
+                {
+                    confirmationSend ?
+                        <ModalConfirmationAction modal={modal} />
+                    : null
                 }
 
             </div>

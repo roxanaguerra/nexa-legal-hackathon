@@ -57,6 +57,7 @@ const ActionPlan = () => {
                                     text2=""
                                     text3="" />
                             </div>
+                            
                         :
                         <div className="container-listCards-action">
                             <p className="fq">Lista de requerimientos</p>

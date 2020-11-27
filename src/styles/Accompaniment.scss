@@ -14,6 +14,29 @@
     align-items: center;
 }
 
+.container-vw {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-no-supervisions {
+    width: 60%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .icon-nexa {
+        width: 60px;
+        height: auto;
+        margin: 15px 0;
+    }
+}
+
 .container-listCards-action {
     margin-bottom: 100px;
     display: flex;

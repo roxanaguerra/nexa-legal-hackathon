@@ -6,6 +6,7 @@ import firestore from '../controller/firestore';
 import Subtitle from './Subtitle';
 import UploadImage from './UploadImage';
 import userPhoto from '../assets/images/user-photo.jpg';
+import ModalFinSupervision from '../components/ModalFinSupervision';
 
 const ActualSupervision = ({infoSupervision}) => {
 
@@ -27,6 +28,10 @@ const ActualSupervision = ({infoSupervision}) => {
 
     const [stateRelevantData, setStateRelevantData] = useState(initialStateSupervision);
 
+    const [confirmationSend, setConfirmationSend] = useState(false);
+    const [modal, setModal] = useState(false);
+    const openModal = () => setModal(true);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setStateRelevantData({ ...stateRelevantData, [name]: value });
@@ -37,7 +42,10 @@ const ActualSupervision = ({infoSupervision}) => {
         firestore.updateDataOfSupervision(infoSupervision.id, relevantData, stateSupervision, stateAction);
     };
 
-    const generateActionPlan = () => {
+    const generateActionPlan = (e) => {
+        e.preventDefault();
+        setConfirmationSend(true);
+        openModal();
         updateDataOfSupervision(stateRelevantData.relevantData, 'FINALIZADA', 'PENDIENTE');
         history.push('/accion');
     }
@@ -134,6 +142,11 @@ const ActualSupervision = ({infoSupervision}) => {
                     </button>
                 </div>
             </div>
+            {
+                confirmationSend ?
+                    <ModalFinSupervision modal={modal} />
+                : null
+            }
         </>
     );
 };

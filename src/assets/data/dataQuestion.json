@@ -64,23 +64,38 @@
     "glossary": [
         {
             "id": 1,
-            "textQ": "ACTA DE SUPERVISIÓN",
-            "textAnswer": "Documento que consigna los hechos verificados en la acción de supervisión, así como las incidencias ocurridas durante el desarrollo."
+            "textQ": "Acta de supervisión",
+            "textAnswer": "Documento suscrito en ejercicio de la función de supervisión directa que incluye, entre otros, los hallazgos verificados in situ, los requerimientos de información efectuados durante la supervisión, las áreas o componentes supervisados, las observaciones planteadas por los administrados y todas las incidencias vinculadas a la supervisión de campo realizada."
         },
         {
             "id": 2,
-            "textQ": "prueba1",
-            "textAnswer": "ttttttttttttttttttttttttttttttttttttttttt"
+            "textQ": "Certificación ambiental",
+            "textAnswer": "Acto administrativo emitido por la autoridad competente a través de la cual se aprueba el instrumento de gestión ambiental, que certifica que el proyecto propuesto ha cumplido con los requisitos de forma y fondo establecidos en el marco del Sistema Nacional de Evaluación de Impacto Ambiental."
         },
         {
             "id": 3,
-            "textQ": "prueba2",
-            "textAnswer": "yyyyyyyyyyyyyyyyyyyyy"
+            "textQ": "Declaración de Impacto Ambiental (DIA)",
+            "textAnswer": "Instrumento de gestión ambiental para proyectos cuya ejecución no origina impactos ambientales negativos de carácter significativo."
         },
         {
             "id": 4,
-            "textQ": "prueba3",
-            "textAnswer": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+            "textQ": "Denuncia ambiental",
+            "textAnswer": "Comunicación que efectúa una persona natural o jurídica respecto de hechos que podrían constituir una infracción administrativa ambiental. La denuncia ambiental tiene carácter informativo y, en principio, no constituye al denunciante como parte en un eventual procedimiento administrativo sancionador."
+        },
+        {
+            "id": 5,
+            "textQ": "Entidad de fiscalización ambiental (EFA)",
+            "textAnswer": "Entidad pública de ámbito nacional, regional o local que tiene atribuida alguna o todas las funciones de fiscalización ambiental, en sentido amplio. Excepcionalmente y, por disposición legal, puede ser considerado EFA un órgano de línea —de una entidad u organismo público— que se encuentre facultado para realizar funciones de fiscalización ambiental."
+        },
+        {
+            "id": 6,
+            "textQ": "Organismo de Evaluación y Fiscalización Ambiental (OEFA)",
+            "textAnswer": "Organismo público técnico especializado, adscrito al Ministerio del Ambiente, encargado de la fiscalización ambiental. Es el ente rector del Sistema Nacional de Evaluación y Fiscalización Ambiental (Sinefa)."
+        },
+        {
+            "id": 7,
+            "textQ": "Sistema Nacional de Evaluación de Impacto Ambiental (SEIA)",
+            "textAnswer": "Sistema único y coordinado de carácter preventivo, cuya función principal es la identificación, evaluación, mitigación y corrección anticipada de los impactos ambientales negativos derivados de acciones humanas expresadas como políticas, planes, programas y proyectos de inversión."
         }
     ]
 }
